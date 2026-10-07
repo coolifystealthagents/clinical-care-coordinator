@@ -1,0 +1,13 @@
+{
+  "site": "Clinical Care Coordinator",
+  "status": "local_verified",
+  "launchArticle": "care-manager-vs-clinical-care-coordinator-va",
+  "preference": "fractional_vs_va",
+  "topics": [
+    {
+      "slug": "care-manager-vs-clinical-care-coordinator-va",
+      "title": "Care manager vs clinical care coordinator VA",
+      "state": "local_verified"
+    }
+  ]
+}
