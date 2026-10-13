@@ -1,0 +1,74 @@
+{
+  "blogs": [
+    {
+      "slug": "referral-document-receipt-reconciliation",
+      "title": "Reconcile Referral Document Receipts Across Care Teams"
+    },
+    {
+      "slug": "patient-scheduling-rule-version-control",
+      "title": "Put Patient Scheduling Rules Under Version Control"
+    },
+    {
+      "slug": "care-coordination-work-queue-ownership",
+      "title": "Assign Clear Ownership in Care Coordination Work Queues"
+    },
+    {
+      "slug": "clinical-handoff-acknowledgment-records",
+      "title": "Build Acknowledgment Records for Clinical Handoffs"
+    },
+    {
+      "slug": "patient-outreach-script-change-control",
+      "title": "Control Changes to Patient Outreach Scripts"
+    },
+    {
+      "slug": "records-request-authorization-checkpoints",
+      "title": "Add Authorization Checkpoints to Records Requests"
+    },
+    {
+      "slug": "care-team-meeting-action-register",
+      "title": "Create a Care Team Meeting Action Register"
+    },
+    {
+      "slug": "referral-status-definition-guide",
+      "title": "Define Referral Statuses With Observable Criteria"
+    },
+    {
+      "slug": "patient-communication-preference-reconciliation",
+      "title": "Reconcile Patient Communication Preferences Safely"
+    },
+    {
+      "slug": "care-coordination-access-review-cadence",
+      "title": "Set an Access Review Cadence for Care Coordination Systems"
+    },
+    {
+      "slug": "care-workflow-outage-reconciliation",
+      "title": "Reconcile Care Coordination Work After a System Outage"
+    },
+    {
+      "slug": "patient-follow-up-exception-taxonomy",
+      "title": "Create a Patient Follow-Up Exception Taxonomy"
+    }
+  ],
+  "research": [
+    {
+      "slug": "care-handoff-completeness-measurement",
+      "title": "Measuring Completeness in Care Handoff Administration"
+    },
+    {
+      "slug": "referral-queue-aging-methods",
+      "title": "Methods for Analyzing Referral Queue Aging"
+    },
+    {
+      "slug": "patient-message-routing-reliability",
+      "title": "Evidence-Based Review of Patient Message Routing Reliability"
+    },
+    {
+      "slug": "care-coordination-record-provenance",
+      "title": "Record Provenance Controls for Care Coordination Workflows"
+    },
+    {
+      "slug": "patient-outreach-denominator-design",
+      "title": "Designing Denominators for Patient Outreach Measures"
+    }
+  ]
+}

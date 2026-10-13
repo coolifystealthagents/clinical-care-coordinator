@@ -1,7 +1,9 @@
 import { site } from './site';
 import type { BlogPost, ResearchPost } from './types';
+import { october12BlogPosts } from './october12-blog';
+import { october12ResearchPosts } from './october12-research';
 
-export const blogPosts: BlogPost[] = [
+const legacyBlogPosts: BlogPost[] = [
   {
     "slug": "care-manager-vs-clinical-care-coordinator-va",
     "title": "Care manager vs clinical care coordinator VA",
@@ -468,7 +470,7 @@ export const blogPosts: BlogPost[] = [
     }
   }
 ];
-export const researchPosts: ResearchPost[] = [
+const legacyResearchPosts: ResearchPost[] = [
   {
     "slug": "patient-scheduling-workflow-boundary-review-1",
     "title": "Patient scheduling support: workflow boundary review",
@@ -910,6 +912,9 @@ export const researchPosts: ResearchPost[] = [
     ]
   }
 ];
+
+export const blogPosts: BlogPost[] = [...october12BlogPosts, ...legacyBlogPosts];
+export const researchPosts: ResearchPost[] = [...october12ResearchPosts, ...legacyResearchPosts];
 
 export const nav = [
   { href: '/services', label: 'Services' },

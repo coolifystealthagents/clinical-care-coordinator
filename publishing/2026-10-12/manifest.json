@@ -1,0 +1,119 @@
+{
+  "site": "ClinicalCareCoordinator",
+  "domain": "clinicalcarecoordinator.com",
+  "canonicalOrigin": "https://clinicalcarecoordinator.com",
+  "repository": "coolifystealthagents/clinical-care-coordinator",
+  "branch": "main",
+  "publicationDate": "2026-10-12",
+  "blog": [
+    {
+      "slug": "referral-document-receipt-reconciliation",
+      "title": "Reconcile Referral Document Receipts Across Care Teams",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/referral-document-receipt-reconciliation.webp"
+    },
+    {
+      "slug": "patient-scheduling-rule-version-control",
+      "title": "Put Patient Scheduling Rules Under Version Control",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/patient-scheduling-rule-version-control.webp"
+    },
+    {
+      "slug": "care-coordination-work-queue-ownership",
+      "title": "Assign Clear Ownership in Care Coordination Work Queues",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/care-coordination-work-queue-ownership.webp"
+    },
+    {
+      "slug": "clinical-handoff-acknowledgment-records",
+      "title": "Build Acknowledgment Records for Clinical Handoffs",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/clinical-handoff-acknowledgment-records.webp"
+    },
+    {
+      "slug": "patient-outreach-script-change-control",
+      "title": "Control Changes to Patient Outreach Scripts",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/patient-outreach-script-change-control.webp"
+    },
+    {
+      "slug": "records-request-authorization-checkpoints",
+      "title": "Add Authorization Checkpoints to Records Requests",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/records-request-authorization-checkpoints.webp"
+    },
+    {
+      "slug": "care-team-meeting-action-register",
+      "title": "Create a Care Team Meeting Action Register",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/care-team-meeting-action-register.webp"
+    },
+    {
+      "slug": "referral-status-definition-guide",
+      "title": "Define Referral Statuses With Observable Criteria",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/referral-status-definition-guide.webp"
+    },
+    {
+      "slug": "patient-communication-preference-reconciliation",
+      "title": "Reconcile Patient Communication Preferences Safely",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/patient-communication-preference-reconciliation.webp"
+    },
+    {
+      "slug": "care-coordination-access-review-cadence",
+      "title": "Set an Access Review Cadence for Care Coordination Systems",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/care-coordination-access-review-cadence.webp"
+    },
+    {
+      "slug": "care-workflow-outage-reconciliation",
+      "title": "Reconcile Care Coordination Work After a System Outage",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/care-workflow-outage-reconciliation.webp"
+    },
+    {
+      "slug": "patient-follow-up-exception-taxonomy",
+      "title": "Create a Patient Follow-Up Exception Taxonomy",
+      "sourcePath": "lib/october12-blog.ts",
+      "thumbnailPath": "public/thumbnails/october-12/patient-follow-up-exception-taxonomy.webp"
+    }
+  ],
+  "research": [
+    {
+      "slug": "care-handoff-completeness-measurement",
+      "title": "Measuring Completeness in Care Handoff Administration",
+      "sourcePath": "lib/october12-research.ts",
+      "thumbnailPath": "public/thumbnails/october-12/care-handoff-completeness-measurement.webp",
+      "sourceCount": 10
+    },
+    {
+      "slug": "referral-queue-aging-methods",
+      "title": "Methods for Analyzing Referral Queue Aging",
+      "sourcePath": "lib/october12-research.ts",
+      "thumbnailPath": "public/thumbnails/october-12/referral-queue-aging-methods.webp",
+      "sourceCount": 10
+    },
+    {
+      "slug": "patient-message-routing-reliability",
+      "title": "Evidence-Based Review of Patient Message Routing Reliability",
+      "sourcePath": "lib/october12-research.ts",
+      "thumbnailPath": "public/thumbnails/october-12/patient-message-routing-reliability.webp",
+      "sourceCount": 10
+    },
+    {
+      "slug": "care-coordination-record-provenance",
+      "title": "Record Provenance Controls for Care Coordination Workflows",
+      "sourcePath": "lib/october12-research.ts",
+      "thumbnailPath": "public/thumbnails/october-12/care-coordination-record-provenance.webp",
+      "sourceCount": 10
+    },
+    {
+      "slug": "patient-outreach-denominator-design",
+      "title": "Designing Denominators for Patient Outreach Measures",
+      "sourcePath": "lib/october12-research.ts",
+      "thumbnailPath": "public/thumbnails/october-12/patient-outreach-denominator-design.webp",
+      "sourceCount": 10
+    }
+  ]
+}
