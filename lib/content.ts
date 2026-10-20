@@ -917,12 +917,15 @@ export const blogPosts: BlogPost[] = [...october12BlogPosts, ...legacyBlogPosts]
 export const researchPosts: ResearchPost[] = [...october12ResearchPosts, ...legacyResearchPosts];
 
 export const nav = [
+  { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
-  { href: '/about', label: 'About' },
-  { href: '/blog', label: 'Blog' },
-  { href: '/research', label: 'Research' },
-  { href: '/contact-us', label: 'Contact' }
+  { href: '/contact-us', label: 'Contact Us' },
 ];
+
+/* Legacy routes remain available, but only the fully sourced illustrated releases
+   are indexable. This prevents thin historical pages from entering the sitemap. */
+export const indexableBlogPosts = blogPosts.filter((post) => Boolean(post.thumbnail));
+export const indexableResearchPosts = researchPosts.filter((post) => Boolean(post.thumbnail));
 
 export function serviceBySlug(slug: string) { return site.services.find((service) => service.slug === slug); }
 export function blogBySlug(slug: string) { return blogPosts.find((post) => post.slug === slug); }

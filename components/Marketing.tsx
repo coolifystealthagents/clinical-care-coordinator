@@ -1,28 +1,65 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { indexableBlogPosts } from '@/lib/content';
 import { site } from '@/lib/site';
-import { blogPosts } from '@/lib/content';
-import { ArrowIcon, CheckIcon, SparkIcon } from './Icons';
-
-const CTA = ({ id, children }: { id: string; children: React.ReactNode }) => <Link id={id} className="button primary" href="/contact-us">{children} <ArrowIcon /></Link>;
-
-function ServiceCards() { return <div className="service-grid">{site.services.map((service, index) => <Link className="service-card reveal" href={`/services/${service.slug}`} key={service.slug}><span className="service-number">0{index + 1}</span><h3>{service.name}</h3><p>{service.short}</p><span className="text-link">Explore the role <ArrowIcon /></span></Link>)}</div>; }
-function Principles() { return <div className="principles">{site.principles.map((item) => <div key={item}><CheckIcon /><span>{item}</span></div>)}</div>; }
-function Latest() { return <div className="article-grid">{blogPosts.slice(0, 3).map((post) => <Link href={`/blog/${post.slug}`} className="article-card" key={post.slug}><span className="pill">{post.category}</span><h3>{post.title}</h3><p>{post.description}</p><span className="text-link">Read the guide <ArrowIcon /></span></Link>)}</div>; }
+import { ReviewLane, TopicVisual, WorkflowArt } from './Visuals';
 
 export function HomePage() {
-  const design = site.design;
-  return <main className={`home design-${design}`}>
-    <section className="hero">
-      <div className="hero-copy"><p className="eyebrow">{site.eyebrow}</p><h1>{site.hero} <em>{site.heroAccent}</em></h1><p className="hero-body">{site.heroBody}</p><div className="hero-actions"><CTA id="cta-home-hero-bookcall">Book a free consultation</CTA><Link className="quiet-link" href="/services">See specialist roles</Link></div><Principles /></div>
-      <div className="hero-visual"><Image src={site.heroImage} alt={site.heroAlt} fill priority sizes="(max-width: 900px) 100vw, 54vw" /><div className="hero-label"><SparkIcon /><span>{site.manifesto}</span></div></div>
-    </section>
-    {design === 'signal' && <section className="signal-strip" aria-label="Inside sales workflow"><span>Prospecting support</span><span>CRM hygiene</span><span>Follow through</span><span>Pipeline visibility</span></section>}
-    {design === 'conversation' && <section className="conversation-band"><div className="bubble one">Clear replies</div><div className="bubble two">Useful context</div><div className="bubble three">Thoughtful escalation</div></section>}
-    <section className="section intro"><p className="eyebrow">Specialist support, shaped around your work</p><div><h2>Build capacity without lowering the bar.</h2><p>{site.manifesto} Your assistant works from documented priorities, clear decision rights, and a practical review rhythm.</p></div></section>
-    <section className="section services"><div className="section-heading"><p className="eyebrow">Roles that fit the work</p><h2>Choose the support your team can actually use.</h2></div><ServiceCards /></section>
-    <section className="section method"><div className="method-art"><span>01</span><span>02</span><span>03</span></div><div><p className="eyebrow">A useful working model</p><h2>Define. Delegate. Improve.</h2><p>Start with the recurring work that already has an owner, a standard, and a clear escalation path. Then create a small review loop that makes the handoff stronger over time.</p><ol><li><strong>Define the boundary.</strong> Separate preparation and coordination from licensed or executive judgment.</li><li><strong>Document the handoff.</strong> Set inputs, output format, review points, and exception rules.</li><li><strong>Improve with evidence.</strong> Review a focused sample and update the process when patterns emerge.</li></ol><CTA id="cta-home-method-consultation">Plan a free consultation</CTA></div></section>
-    <section className="section journal"><div className="section-heading"><p className="eyebrow">Field notes</p><h2>Practical guidance for better delegation.</h2></div><Latest /></section>
-    <section className="closing"><p className="eyebrow">Make room for the work only you can do</p><h2>Let us map your first specialist support role.</h2><p>A focused conversation can turn scattered tasks into a clear, reviewable role brief.</p><CTA id="cta-home-closing-schedulecall">Schedule a free call</CTA></section>
-  </main>;
+  return (
+    <main id="main-content">
+      <section className="home-hero">
+        <div className="hero-copy">
+          <p className="eyebrow">{site.eyebrow}</p>
+          <h1>{site.hero} <em>{site.heroAccent}</em></h1>
+          <p className="hero-body">{site.heroBody}</p>
+          <div className="hero-actions">
+            <Link id="cta-home-hero-contact" className="button primary" href="/contact-us">Start a workflow conversation</Link>
+            <Link className="quiet-link" href="/services">Review support scopes</Link>
+          </div>
+          <ul className="principle-list">{site.principles.map((item) => <li key={item}>{item}</li>)}</ul>
+        </div>
+        <WorkflowArt title="A visible path from intake to closure" />
+      </section>
+
+      <section className="status-strip" aria-label="Coordination operating model">
+        <span>Owner named</span><span>Evidence attached</span><span>Next action visible</span><span>Boundary protected</span>
+      </section>
+
+      <section className="section split-intro">
+        <div><p className="eyebrow">Clinical Operations Ledger</p><h2>Support the coordination. Protect the decision.</h2></div>
+        <div><p>{site.manifesto}</p><p>Remote coordinators work inside your approved procedures and systems. Your organization defines access, supervision, privacy controls, emergency paths, and every licensed decision.</p></div>
+      </section>
+
+      <section className="section ruled-section">
+        <div className="section-heading"><p className="eyebrow">Focused service lines</p><h2>Choose the queue that needs continuity.</h2></div>
+        <div className="service-grid">
+          {site.services.map((service) => (
+            <Link className="service-card" href={`/services/${service.slug}`} key={service.slug}>
+              <span className={`service-symbol symbol-${service.theme}`} aria-hidden="true" />
+              <h3>{service.name}</h3><p>{service.short}</p><span className="text-link">Inspect the service scope</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="section handoff-section">
+        <WorkflowArt variant="referral" title="A handoff that can be checked" />
+        <div><p className="eyebrow">A controlled launch</p><h2>Start narrow. Learn from the record.</h2><p>Select one recurring queue. Define accepted inputs, completion evidence, the licensed boundary, and named escalation owners. Review a small sample before the scope grows.</p><dl className="ledger-list"><div><dt>Owner</dt><dd>Who accepts the next action</dd></div><div><dt>Evidence</dt><dd>What supports the current status</dd></div><div><dt>Exception</dt><dd>When work pauses and transfers</dd></div></dl><Link className="button primary" href="/contact-us">Map the first workflow</Link></div>
+      </section>
+
+      <ReviewLane />
+
+      <section className="section credibility-section">
+        <div className="team-photo"><Image src="/brand/stealth-agents-team-bacolod.webp" alt="Stealth Agents team members in the Bacolod office" fill sizes="(max-width: 800px) 100vw, 48vw" /></div>
+        <div><p className="eyebrow">Powered by Stealth Agents</p><h2>People behind the operational support.</h2><p>Clinical Care Coordinator is powered by Stealth Agents. Candidate matching and ongoing support are grounded in role clarity, documented expectations, and accountable management.</p><p>This is a staffing service for administrative coordination. It does not provide medical care or replace licensed personnel.</p><Link className="quiet-link" href="/about">Read how the model works</Link></div>
+      </section>
+
+      <section className="section">
+        <div className="section-heading"><p className="eyebrow">Operations field notes</p><h2>Guidance built around evidence and boundaries.</h2></div>
+        <div className="article-grid">{indexableBlogPosts.slice(0, 3).map((post) => <Link href={`/blog/${post.slug}`} className="article-card" key={post.slug}><TopicVisual title={post.title} src={post.thumbnail} /><span className="pill">{post.category}</span><h3>{post.title}</h3><p>{post.description}</p><span className="text-link">Read the guide</span></Link>)}</div>
+      </section>
+
+      <section className="closing"><p className="eyebrow">A practical next action</p><h2>Bring one queue that needs a clearer handoff.</h2><p>We will discuss the role, inputs, outputs, review owner, and escalation boundary without asking for patient information.</p><Link className="button light" href="/contact-us">Contact Us</Link></section>
+    </main>
+  );
 }

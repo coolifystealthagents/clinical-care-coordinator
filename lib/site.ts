@@ -1,108 +1,107 @@
-import type { SiteConfig } from './types';
+import type { Service, SiteConfig } from './types';
+
+const sharedFaq = (role: string) => [
+  { q: `Can ${role} make clinical decisions?`, a: 'No. The coordinator follows approved administrative procedures and transfers clinical questions to the licensed owner.' },
+  { q: 'How should a team begin?', a: 'Begin with one documented queue, limited access, named reviewers, and a small quality sample.' },
+  { q: 'What happens when evidence is missing?', a: 'The coordinator records what is missing, preserves the current status, and routes the exception to the named owner.' },
+];
+
+export const services: Service[] = [
+  {
+    slug: 'patient-scheduling', name: 'Patient scheduling support', theme: 'calendar',
+    short: 'Coordinate routine appointment details from approved scheduling rules.',
+    scope: 'A scheduling coordinator keeps administrative appointment work visible across request, preparation, confirmation, and exception routing.',
+    tasks: ['Enter requests from approved channels', 'Offer times allowed by current rules', 'Send approved reminders', 'Document responses and access barriers'],
+    licensed: ['Clinical urgency and triage', 'Medical advice or symptom interpretation', 'Changes that require professional authorization'],
+    inputs: ['Current scheduling protocol', 'Approved calendars and visit types', 'Communication templates and preference records'],
+    outputs: ['Documented appointment status', 'Confirmation or attempted contact record', 'Exception assigned to the correct owner'],
+    triggers: ['Symptoms or clinical questions', 'No permitted appointment path', 'Conflicting identity, consent, or contact details'],
+    launch: ['Map request channels', 'Test visit type rules', 'Approve message templates', 'Sample completed and escalated records'],
+    checks: ['Correct visit type and owner', 'Source and contact attempt recorded', 'No unsupported urgency judgment'],
+    faq: sharedFaq('a scheduling coordinator'),
+    reading: [{ label: 'Scheduling rule version control', href: '/blog/patient-scheduling-rule-version-control' }, { label: 'Scheduling workflow boundary review', href: '/research/patient-scheduling-workflow-boundary-review-1' }],
+  },
+  {
+    slug: 'referral-coordination', name: 'Referral coordination support', theme: 'referral',
+    short: 'Keep referral records, receipt checks, and handoffs visible.',
+    scope: 'A referral coordinator reconciles administrative evidence so the receiving and sending teams can see ownership, missing material, and next action.',
+    tasks: ['Create referral queue records', 'Check receipt through approved channels', 'Request listed documents', 'Route stalled or returned handoffs'],
+    licensed: ['Referral appropriateness', 'Clinical priority or destination', 'Interpretation of clinical documentation'],
+    inputs: ['Referral order or request', 'Required document checklist', 'Destination directory and status definitions'],
+    outputs: ['Source linked referral record', 'Receipt and missing item status', 'Acknowledged handoff or named exception'],
+    triggers: ['Unclear destination or priority', 'Conflicting referral data', 'Repeated failed transfer or missing authorization'],
+    launch: ['Define receipt evidence', 'Name status owners', 'Test duplicate handling', 'Review returned handoffs'],
+    checks: ['Each status has evidence', 'Missing items remain visible', 'Professional review is not marked complete administratively'],
+    faq: sharedFaq('a referral coordinator'),
+    reading: [{ label: 'Referral receipt reconciliation', href: '/blog/referral-document-receipt-reconciliation' }, { label: 'Referral queue aging methods', href: '/research/referral-queue-aging-methods' }],
+  },
+  {
+    slug: 'care-gap-outreach', name: 'Care gap outreach support', theme: 'outreach',
+    short: 'Prepare and document routine outreach under approved guidance.',
+    scope: 'An outreach coordinator works from an authorized population and script, records delivery states, and transfers questions instead of interpreting care needs.',
+    tasks: ['Prepare authorized outreach queues', 'Use approved channel and script', 'Record attempt and response states', 'Transfer opt outs and clinical questions'],
+    licensed: ['Determining a care gap', 'Recommending care or treatment', 'Assessing symptoms, risk, or urgency'],
+    inputs: ['Approved outreach population', 'Current scripts and channel preferences', 'Attempt limits and transfer directory'],
+    outputs: ['Traceable attempt record', 'Response category without clinical inference', 'Escalation with original wording preserved'],
+    triggers: ['Patient asks for advice', 'Contact preference or consent conflict', 'Script no longer fits the response'],
+    launch: ['Freeze eligible population', 'Approve scripts', 'Test transfer paths', 'Review opt outs and failed deliveries'],
+    checks: ['Only eligible records contacted', 'Preference and attempt rules followed', 'Original question preserved for handoff'],
+    faq: sharedFaq('an outreach coordinator'),
+    reading: [{ label: 'Outreach denominator design', href: '/research/patient-outreach-denominator-design' }, { label: 'Outreach script change control', href: '/blog/patient-outreach-script-change-control' }],
+  },
+  {
+    slug: 'records-coordination', name: 'Records coordination', theme: 'records',
+    short: 'Organize document requests and receipts without interpreting clinical content.',
+    scope: 'A records coordinator tracks authorization, request, receipt, and reconciliation evidence while content review remains with authorized professionals.',
+    tasks: ['Validate administrative request fields', 'Track authorization checkpoints', 'Log request and receipt dates', 'Reconcile expected and received items'],
+    licensed: ['Clinical interpretation', 'Legal or privacy determinations', 'Approval of disclosure outside written procedure'],
+    inputs: ['Approved request and authorization', 'Document inventory', 'Source and destination contact details'],
+    outputs: ['Dated request ledger', 'Receipt inventory', 'Missing item or authorization exception'],
+    triggers: ['Authorization is absent or inconsistent', 'Record identity conflicts', 'Request falls outside approved scope'],
+    launch: ['Inventory request types', 'Map authorization checks', 'Define receipt evidence', 'Sample closed and incomplete requests'],
+    checks: ['Authorization checkpoint recorded', 'Receipt does not imply content review', 'Corrections retain prior provenance'],
+    faq: sharedFaq('a records coordinator'),
+    reading: [{ label: 'Authorization checkpoints', href: '/blog/records-request-authorization-checkpoints' }, { label: 'Record provenance controls', href: '/research/care-coordination-record-provenance' }],
+  },
+  {
+    slug: 'patient-communication', name: 'Patient communication support', theme: 'message',
+    short: 'Handle routine nonclinical messages with explicit routing rules.',
+    scope: 'A communication coordinator acknowledges and routes administrative messages, preserving patient wording and ownership across every transfer.',
+    tasks: ['Classify approved administrative topics', 'Send approved acknowledgments', 'Preserve original message context', 'Track transfer and acknowledgment'],
+    licensed: ['Triage or symptom assessment', 'Diagnosis, advice, or care instructions', 'Clinical interpretation of patient language'],
+    inputs: ['Approved topic taxonomy', 'Response templates', 'Routing directory and urgent transfer protocol'],
+    outputs: ['Acknowledged message', 'Traceable transfer record', 'Unresolved owner exception'],
+    triggers: ['Any symptom or safety statement', 'Ambiguous topic or intended recipient', 'No acknowledgment within the local rule'],
+    launch: ['Sample message categories', 'Approve acknowledgments', 'Test urgent transfer path', 'Audit unowned messages'],
+    checks: ['Original meaning retained', 'No clinical paraphrase', 'Transfer owner and acknowledgment visible'],
+    faq: sharedFaq('a communication coordinator'),
+    reading: [{ label: 'Message routing reliability', href: '/research/patient-message-routing-reliability' }, { label: 'Communication preference reconciliation', href: '/blog/patient-communication-preference-reconciliation' }],
+  },
+  {
+    slug: 'care-team-administration', name: 'Care team administration', theme: 'team',
+    short: 'Prepare meeting, action, and work queue records for care teams.',
+    scope: 'A care team administrator turns approved discussions into accountable action records without converting notes into clinical direction.',
+    tasks: ['Prepare agendas from approved inputs', 'Maintain action registers', 'Record owners and due dates', 'Surface overdue or blocked actions'],
+    licensed: ['Care plan creation or approval', 'Clinical interpretation of discussion', 'Assignment of professional accountability'],
+    inputs: ['Approved agenda and attendee list', 'Prior action register', 'Owner directory and meeting procedure'],
+    outputs: ['Meeting packet', 'Decision and action record', 'Blocked item escalation'],
+    triggers: ['Action lacks an authorized owner', 'Notes imply new clinical direction', 'Sensitive content is outside the approved record'],
+    launch: ['Agree record format', 'Define approval point', 'Test action carryover', 'Review access after the first cycle'],
+    checks: ['Decision and action are distinguished', 'Owner and due date are explicit', 'Clinical content receives authorized review'],
+    faq: sharedFaq('a care team administrator'),
+    reading: [{ label: 'Care team action register', href: '/blog/care-team-meeting-action-register' }, { label: 'Handoff completeness measurement', href: '/research/care-handoff-completeness-measurement' }],
+  },
+];
+
 export const site: SiteConfig = {
-  "name": "Clinical Care Coordinator",
-  "domain": "clinicalcarecoordinator.com",
-  "siteId": "clinical-care-coordinator",
-  "niche": "clinical care teams",
-  "audience": "care organizations and clinical operations leaders",
-  "design": "clinical",
-  "eyebrow": "Care coordination support with thoughtful boundaries",
-  "hero": "Keep care handoffs",
-  "heroAccent": "clear and human.",
-  "heroBody": "Specialist remote coordinators support scheduling, referral records, patient communication, follow up queues, and documentation workflows while clinical judgment stays with licensed professionals.",
-  "manifesto": "Continuity improves when every handoff has context, ownership, and a safe escalation path.",
-  "primary": "#466b58",
-  "secondary": "#cbb8c9",
-  "accent": "#d8a58e",
-  "canvas": "#f5f2ed",
-  "ink": "#26322d",
-  "displayFont": "Palatino",
-  "bodyFont": "Optima",
-  "heroImage": "/hero.png",
-  "heroAlt": "Color coded care folders, stethoscope, and calm workflow markers on a bright desk",
-  "services": [
-    {
-      "slug": "patient-scheduling",
-      "name": "Patient scheduling support",
-      "short": "Coordinate routine scheduling details from approved protocols.",
-      "tasks": [
-        "Manage approved appointment tasks",
-        "Send routine reminders",
-        "Document scheduling outcomes",
-        "Escalate access barriers"
-      ]
-    },
-    {
-      "slug": "referral-coordination",
-      "name": "Referral coordination support",
-      "short": "Keep referral records, status checks, and handoffs visible.",
-      "tasks": [
-        "Prepare referral records",
-        "Track approved status points",
-        "Coordinate document requests",
-        "Flag stalled handoffs"
-      ]
-    },
-    {
-      "slug": "care-gap-outreach",
-      "name": "Care gap outreach support",
-      "short": "Prepare and document routine outreach under approved guidance.",
-      "tasks": [
-        "Maintain outreach queues",
-        "Use approved scripts",
-        "Record response outcomes",
-        "Route clinical questions"
-      ]
-    },
-    {
-      "slug": "records-coordination",
-      "name": "Records coordination",
-      "short": "Organize document requests and receipt status without interpreting clinical content.",
-      "tasks": [
-        "Prepare request logs",
-        "Track authorization status",
-        "Record receipt dates",
-        "Escalate missing records"
-      ]
-    },
-    {
-      "slug": "patient-communication",
-      "name": "Patient communication support",
-      "short": "Handle routine non-clinical communication with safe escalation rules.",
-      "tasks": [
-        "Answer approved administrative questions",
-        "Document patient context",
-        "Route symptom questions",
-        "Coordinate approved updates"
-      ]
-    },
-    {
-      "slug": "care-team-administration",
-      "name": "Care team administration",
-      "short": "Prepare meeting, follow up, and work queue records for clinical teams.",
-      "tasks": [
-        "Prepare coordination summaries",
-        "Maintain action logs",
-        "Organize meeting materials",
-        "Flag overdue items"
-      ]
-    }
-  ],
-  "categories": [
-    "Care coordination",
-    "Referral systems",
-    "Patient communication",
-    "Role design"
-  ],
-  "principles": [
-    "Top 1 percent selectivity",
-    "Clear role boundaries",
-    "Reviewable workflows"
-  ],
-  "sources": [
-    {
-      "label": "Agency for Healthcare Research and Quality",
-      "url": "https://www.ahrq.gov/ncepcr/care/coordination.html"
-    }
-  ]
+  name: 'Clinical Care Coordinator', domain: 'clinicalcarecoordinator.com', siteId: 'clinical-care-coordinator',
+  niche: 'clinical care teams', audience: 'care organizations and clinical operations leaders', design: 'clinical-ledger',
+  eyebrow: 'Administrative continuity for care teams', hero: 'Every handoff needs', heroAccent: 'an owner and evidence.',
+  heroBody: 'Specialist remote coordinators support scheduling, referrals, outreach, records, and team administration while licensed professionals retain clinical judgment.',
+  manifesto: 'Continuity becomes inspectable when each next action has context, evidence, and a safe escalation path.',
+  primary: '#174b3b', secondary: '#dbe5df', accent: '#a95f4c', canvas: '#f6f7f3', ink: '#172822',
+  displayFont: 'Georgia', bodyFont: 'Arial', heroImage: '/hero.png', heroAlt: 'Administrative care workflow ledger',
+  services, categories: ['Care coordination', 'Referral systems', 'Patient communication', 'Role design'],
+  principles: ['Documented ownership', 'Licensed boundaries', 'Reviewable handoffs'],
+  sources: [{ label: 'Agency for Healthcare Research and Quality', url: 'https://www.ahrq.gov/ncepcr/care/coordination.html' }],
 };
