@@ -35,7 +35,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         { '@type': 'ListItem', position: 2, name: 'Services', item: `https://${site.domain}/services` },
         { '@type': 'ListItem', position: 3, name: service.name, item: url },
       ] },
-      { '@type': 'Service', name: service.name, description: service.scope, url, serviceType: 'Remote administrative staffing support', provider: { '@id': `https://${site.domain}/#organization` }, areaServed: 'Remote' },
+      { '@type': 'Service', name: service.name, description: service.scope, url, serviceType: 'Remote administrative staffing support', areaServed: 'Remote' },
       { '@type': 'FAQPage', mainEntity: service.faq.map((item) => ({ '@type': 'Question', name: item.q, acceptedAnswer: { '@type': 'Answer', text: item.a } })) },
     ],
   };
