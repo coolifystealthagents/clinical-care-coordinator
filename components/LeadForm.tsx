@@ -46,7 +46,7 @@ export function LeadForm({ source = 'contact-page-consultation' }: { source?: st
         headers: { 'x-requested-with': 'clinical-care-contact-form' },
       });
       const result = await response.json();
-      if (!response.ok || !result.ok || result.status !== 'delivered') {
+      if (!response.ok || !result.ok || result.status !== 'validated') {
         setError(result.message || 'We could not deliver your request right now. Your information was not accepted. Please try again later.');
         setBusy(false);
         return;

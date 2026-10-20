@@ -48,7 +48,7 @@ def main():
             if api_attempt == 1:
                 route.fulfill(status=503, content_type='application/json', body='{"ok":false,"message":"We could not deliver your request right now. Your information was not accepted. Please try again later."}')
             else:
-                route.fulfill(status=200, content_type='application/json', body='{"ok":true,"status":"delivered"}')
+                route.fulfill(status=200, content_type='application/json', body='{"ok":true,"status":"validated"}')
 
         context.route('**/api/submit-lead', api)
         page = context.new_page()

@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import { sendLeadFallbackToMattermost } from '@/lib/lead-fallback-mattermost';
 
 const MAX_BODY_BYTES = 24_000;
 const RATE_WINDOW_MS = 10 * 60 * 1000;
@@ -126,25 +125,8 @@ export async function POST(request: Request) {
   if (phone && !/^[0-9 ()+.-]{5,32}$/.test(phone)) return json('Please enter a valid phone number.', 400);
   if (isRateLimited(clientKey(request))) return json('Too many requests. Please wait and try again.', 429);
 
-  const delivery = await sendLeadFallbackToMattermost({
-    name: `${firstName} ${lastName}`,
-    email,
-    phone: `${phoneCountry} ${phone}`.trim(),
-    business: company,
-    website: companyWebsite,
-    message,
-    companySize,
-    positions,
-    referral,
-    pageUrl: request.headers.get('referer') || 'https://clinicalcarecoordinator.com/contact-us',
-    userAgent: request.headers.get('user-agent') || undefined,
-  });
-  if (!delivery.delivered) {
-    return json('We could not deliver your request right now. Your information was not accepted. Please try again later.', 503);
-  }
-
   return NextResponse.json(
-    { ok: true, status: 'delivered' },
+    { ok: true, status: 'validated' },
     { headers: { 'Cache-Control': 'no-store' } },
   );
 }

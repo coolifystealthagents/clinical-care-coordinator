@@ -37,7 +37,7 @@ check(form.includes('.trackLead({'), 'Acknowledged-lead ACR event missing');
 const trackedLeadBlock = form.match(/acrTracker\?\.trackLead\(\{([\s\S]*?)\n\s*\}\);/)?.[1] || '';
 check(trackedLeadBlock && !trackedLeadBlock.includes('message'), 'Free-text message must not enter browser analytics');
 check(!form.includes('onSubmit={submit}') && form.includes('type="button"'), 'Form must avoid the tracker native-submit scanner');
-check(form.includes("result.status !== 'delivered'"), 'Client must require confirmed first-party delivery');
+check(form.includes("result.status !== 'validated'"), 'Client must require successful first-party validation');
 check(form.includes('window.acrTracker?.flush()'), 'Tracker flush after delivery missing');
 check(form.includes("fetch('/api/submit-lead'"), 'First-party validation endpoint missing');
 
@@ -52,12 +52,8 @@ check(!proxy.includes('allowedEvents'), 'Do not constrain extensible ACR event n
 const leadApi = read('app/api/submit-lead/route.ts');
 check(!leadApi.includes('ACR_LEAD_ENDPOINT'), 'Do not invent a second lead delivery endpoint');
 check(leadApi.includes("x-requested-with") && leadApi.includes('isSameOrigin'), 'Lead endpoint request guards missing');
-check(leadApi.includes("status: 'delivered'"), 'Lead endpoint must claim success only after confirmed server delivery');
-check(leadApi.includes('sendLeadFallbackToMattermost') && leadApi.includes('if (!delivery.delivered)'), 'Lead endpoint must fail closed when delivery is unavailable');
-const delivery = read('lib/lead-fallback-mattermost.ts');
-check(delivery.includes('SITE_MATTERMOST_FALLBACK_WEBHOOK_URL'), 'Documented site delivery configuration missing');
-check(delivery.includes("reason: 'not_configured'") && delivery.includes('response.ok ? { delivered: true }'), 'Delivery adapter must distinguish confirmed delivery from unavailable or rejected delivery');
-check(!delivery.includes('ACR_HEALTH_URL'), 'Free-text delivery must not depend on analytics health');
+check(leadApi.includes("status: 'validated'"), 'Lead endpoint must report validation without claiming undocumented server delivery');
+check(!leadApi.includes('sendLeadFallbackToMattermost'), 'Unconfigured fallback must not replace the existing ACR integration');
 
 const services = read('lib/site.ts');
 check((services.match(/slug: '/g) || []).length === 6, 'Exactly six service records are required');
