@@ -77,6 +77,10 @@ check(canonicalProxy.includes("request.headers.get('cf-visitor')"), 'Canonical p
 check(canonicalProxy.includes("JSON.parse(cloudflareVisitor)?.scheme"), 'Cloudflare visitor scheme must be parsed as JSON');
 check(canonicalProxy.includes("new URL(`https://${apex}`)"), 'Canonical redirect must use a fixed destination origin');
 
+const nextConfig = read('next.config.mjs');
+check(nextConfig.includes('https://static.cloudflareinsights.com'), 'CSP must allow the Cloudflare-injected analytics script');
+check(nextConfig.includes('https://cloudflareinsights.com'), 'CSP must allow the Cloudflare analytics beacon');
+
 const layout = read('app/layout.tsx');
 check(layout.includes('acrtracking.stealthagents.us/v1/tracker.js'), 'Central tracker script missing');
 check(!/modal|popup/i.test(siteChrome + read('components/Marketing.tsx')), 'Timed modal or popup marker returned');
