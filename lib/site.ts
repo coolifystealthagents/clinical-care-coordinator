@@ -1,11 +1,5 @@
 import type { Service, SiteConfig } from './types';
 
-const sharedFaq = (role: string) => [
-  { q: `Can ${role} make clinical decisions?`, a: 'No. The coordinator follows approved administrative procedures and transfers clinical questions to the licensed owner.' },
-  { q: 'How should a team begin?', a: 'Begin with one documented queue, limited access, named reviewers, and a small quality sample.' },
-  { q: 'What happens when evidence is missing?', a: 'The coordinator records what is missing, preserves the current status, and routes the exception to the named owner.' },
-];
-
 export const services: Service[] = [
   {
     slug: 'patient-scheduling', name: 'Patient scheduling support', theme: 'calendar',
@@ -18,7 +12,11 @@ export const services: Service[] = [
     triggers: ['Symptoms or clinical questions', 'No permitted appointment path', 'Conflicting identity, consent, or contact details'],
     launch: ['Map request channels', 'Test visit type rules', 'Approve message templates', 'Sample completed and escalated records'],
     checks: ['Correct visit type and owner', 'Source and contact attempt recorded', 'No unsupported urgency judgment'],
-    faq: sharedFaq('a scheduling coordinator'),
+    faq: [
+      { q: 'Can a scheduling coordinator decide how urgent a request is?', a: 'No. Clinical urgency, symptom questions, and triage stay with the licensed owner and approved local response path.' },
+      { q: 'Which scheduling rules should be documented first?', a: 'Start with approved visit types, permitted calendars, request sources, identity checks, message templates, and the cases that require review.' },
+      { q: 'How is a scheduling exception closed?', a: 'The record should show the original request, attempts made, the reason the standard path stopped, and the owner who accepted the next action.' },
+    ],
     reading: [{ label: 'Scheduling rule version control', href: '/blog/patient-scheduling-rule-version-control' }, { label: 'Scheduling workflow boundary review', href: '/research/patient-scheduling-workflow-boundary-review-1' }],
   },
   {
@@ -32,7 +30,11 @@ export const services: Service[] = [
     triggers: ['Unclear destination or priority', 'Conflicting referral data', 'Repeated failed transfer or missing authorization'],
     launch: ['Define receipt evidence', 'Name status owners', 'Test duplicate handling', 'Review returned handoffs'],
     checks: ['Each status has evidence', 'Missing items remain visible', 'Professional review is not marked complete administratively'],
-    faq: sharedFaq('a referral coordinator'),
+    faq: [
+      { q: 'Can a referral coordinator select a clinical destination?', a: 'No. The coordinator can use an approved directory, but appropriateness, priority, and clinical destination decisions stay with authorized staff.' },
+      { q: 'What counts as referral receipt evidence?', a: 'Your procedure should define it. Examples may include a destination acknowledgment, accepted portal status, or another recorded confirmation your organization approves.' },
+      { q: 'How should missing referral documents be handled?', a: 'Keep each missing item visible, record the request and response, and transfer unresolved or conflicting requirements to the named owner.' },
+    ],
     reading: [{ label: 'Referral receipt reconciliation', href: '/blog/referral-document-receipt-reconciliation' }, { label: 'Referral queue aging methods', href: '/research/referral-queue-aging-methods' }],
   },
   {
@@ -46,7 +48,11 @@ export const services: Service[] = [
     triggers: ['Patient asks for advice', 'Contact preference or consent conflict', 'Script no longer fits the response'],
     launch: ['Freeze eligible population', 'Approve scripts', 'Test transfer paths', 'Review opt outs and failed deliveries'],
     checks: ['Only eligible records contacted', 'Preference and attempt rules followed', 'Original question preserved for handoff'],
-    faq: sharedFaq('an outreach coordinator'),
+    faq: [
+      { q: 'Can an outreach coordinator decide who has a care gap?', a: 'No. The coordinator works only from an approved population and does not infer eligibility, risk, or a need for treatment.' },
+      { q: 'What happens when a patient asks a clinical question?', a: "The coordinator preserves the question in the patient's own wording and follows the approved transfer path without offering advice." },
+      { q: 'How are contact preferences protected?', a: 'The current approved preference record, channel rules, attempt limits, and opt out procedure should be checked before and during outreach.' },
+    ],
     reading: [{ label: 'Outreach denominator design', href: '/research/patient-outreach-denominator-design' }, { label: 'Outreach script change control', href: '/blog/patient-outreach-script-change-control' }],
   },
   {
@@ -60,7 +66,11 @@ export const services: Service[] = [
     triggers: ['Authorization is absent or inconsistent', 'Record identity conflicts', 'Request falls outside approved scope'],
     launch: ['Inventory request types', 'Map authorization checks', 'Define receipt evidence', 'Sample closed and incomplete requests'],
     checks: ['Authorization checkpoint recorded', 'Receipt does not imply content review', 'Corrections retain prior provenance'],
-    faq: sharedFaq('a records coordinator'),
+    faq: [
+      { q: 'Does a received record mean its clinical content was reviewed?', a: 'No. Receipt and inventory are administrative statuses. An authorized professional performs any clinical interpretation or completeness judgment.' },
+      { q: 'Can the coordinator approve a disclosure?', a: 'Only routine steps expressly covered by the organization&apos;s written procedure may be supported. Legal, privacy, and out of scope disclosure decisions transfer to authorized staff.' },
+      { q: 'What should a records ledger preserve?', a: 'It should preserve the request source, authorization checkpoint, dates, expected items, received items, corrections, and unresolved exceptions.' },
+    ],
     reading: [{ label: 'Authorization checkpoints', href: '/blog/records-request-authorization-checkpoints' }, { label: 'Record provenance controls', href: '/research/care-coordination-record-provenance' }],
   },
   {
@@ -74,7 +84,11 @@ export const services: Service[] = [
     triggers: ['Any symptom or safety statement', 'Ambiguous topic or intended recipient', 'No acknowledgment within the local rule'],
     launch: ['Sample message categories', 'Approve acknowledgments', 'Test urgent transfer path', 'Audit unowned messages'],
     checks: ['Original meaning retained', 'No clinical paraphrase', 'Transfer owner and acknowledgment visible'],
-    faq: sharedFaq('a communication coordinator'),
+    faq: [
+      { q: 'Can a communication coordinator interpret a symptom message?', a: 'No. Any symptom, safety, or clinical statement follows the urgent or clinical transfer rule without interpretation.' },
+      { q: 'Why preserve the original patient wording?', a: 'Preserving the original message reduces meaning loss and lets the authorized recipient evaluate the source rather than an administrative paraphrase.' },
+      { q: 'When is a message handoff complete?', a: 'Completion should require the evidence your organization defines, such as an accepted transfer or acknowledgment by the named receiving owner.' },
+    ],
     reading: [{ label: 'Message routing reliability', href: '/research/patient-message-routing-reliability' }, { label: 'Communication preference reconciliation', href: '/blog/patient-communication-preference-reconciliation' }],
   },
   {
@@ -88,7 +102,11 @@ export const services: Service[] = [
     triggers: ['Action lacks an authorized owner', 'Notes imply new clinical direction', 'Sensitive content is outside the approved record'],
     launch: ['Agree record format', 'Define approval point', 'Test action carryover', 'Review access after the first cycle'],
     checks: ['Decision and action are distinguished', 'Owner and due date are explicit', 'Clinical content receives authorized review'],
-    faq: sharedFaq('a care team administrator'),
+    faq: [
+      { q: 'Can an administrator turn meeting notes into a care plan?', a: 'No. The role can record approved decisions and actions, but care plan creation, interpretation, and approval stay with qualified professionals.' },
+      { q: 'What makes an action register useful?', a: 'Each action should distinguish the decision from the task and show the authorized owner, due point, source meeting, current status, and blocker.' },
+      { q: 'How should sensitive meeting content be handled?', a: 'Use only the approved record and access path. Content outside that scope should pause for guidance from the authorized owner.' },
+    ],
     reading: [{ label: 'Care team action register', href: '/blog/care-team-meeting-action-register' }, { label: 'Handoff completeness measurement', href: '/research/care-handoff-completeness-measurement' }],
   },
 ];
