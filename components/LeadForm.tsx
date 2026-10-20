@@ -35,6 +35,12 @@ export function LeadForm({ source = 'contact-page-consultation' }: { source?: st
     if (emailInput) validateBusinessEmail(emailInput);
     if (!form.reportValidity()) return;
 
+    const tracker = window.acrTracker;
+    if (!tracker?.trackLead) {
+      setError('The inquiry service is temporarily unavailable. Your information was not accepted. Please try again later.');
+      return;
+    }
+
     setBusy(true);
     setError('');
     const data = new FormData(form);
@@ -54,7 +60,7 @@ export function LeadForm({ source = 'contact-page-consultation' }: { source?: st
 
       const email = String(data.get('email') || '').trim().toLowerCase();
       try {
-        window.acrTracker?.trackLead({
+        tracker.trackLead({
           name: `${String(data.get('first_name') || '').trim()} ${String(data.get('last_name') || '').trim()}`.trim(),
           email,
           phone: `${String(data.get('phone_country') || '').trim()} ${String(data.get('phone') || '').trim()}`.trim(),
@@ -65,9 +71,11 @@ export function LeadForm({ source = 'contact-page-consultation' }: { source?: st
           source,
           formId: 'clinical-care-contact',
         });
-        window.acrTracker?.flush();
+        tracker.flush();
       } catch {
-        // Server delivery succeeded; analytics must not make the visitor resubmit.
+        setError('The inquiry service is temporarily unavailable. Your information was not accepted. Please try again later.');
+        setBusy(false);
+        return;
       }
       router.push('/thank-you');
     } catch {
@@ -161,7 +169,7 @@ export function LeadForm({ source = 'contact-page-consultation' }: { source?: st
       <button className="button primary form-wide" disabled={busy} type="button" onClick={(event) => void submit(event.currentTarget.form!)}>
         {busy ? 'Sending request…' : 'Request a free consultation'}
       </button>
-      <p className="form-privacy form-wide">By submitting, you agree that we may contact you about your staffing request. Do not send patient information through this form.</p>
+      <p className="form-privacy form-wide">After validation, contact and organization fields are sent through our lead attribution service so we may contact you. The workflow description is excluded from browser analytics and is not currently delivered to an external inquiry inbox. Do not send patient information or rely on this form to transmit operational detail.</p>
     </form>
   );
 }

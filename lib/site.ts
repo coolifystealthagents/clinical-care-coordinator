@@ -68,7 +68,7 @@ export const services: Service[] = [
     checks: ['Authorization checkpoint recorded', 'Receipt does not imply content review', 'Corrections retain prior provenance'],
     faq: [
       { q: 'Does a received record mean its clinical content was reviewed?', a: 'No. Receipt and inventory are administrative statuses. An authorized professional performs any clinical interpretation or completeness judgment.' },
-      { q: 'Can the coordinator approve a disclosure?', a: 'Only routine steps expressly covered by the organization&apos;s written procedure may be supported. Legal, privacy, and out of scope disclosure decisions transfer to authorized staff.' },
+      { q: 'Can the coordinator approve a disclosure?', a: "Only routine steps expressly covered by the organization's written procedure may be supported. Legal, privacy, and out of scope disclosure decisions transfer to authorized staff." },
       { q: 'What should a records ledger preserve?', a: 'It should preserve the request source, authorization checkpoint, dates, expected items, received items, corrections, and unresolved exceptions.' },
     ],
     reading: [{ label: 'Authorization checkpoints', href: '/blog/records-request-authorization-checkpoints' }, { label: 'Record provenance controls', href: '/research/care-coordination-record-provenance' }],

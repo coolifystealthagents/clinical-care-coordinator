@@ -30,12 +30,13 @@ def main():
         stub = """
           window.__leadCalls = [];
           window.__nativeSubmits = 0;
-          window.acrTracker = {
+          window.__tracker = {
             version: '0.4.19-contract-stub', isTest: true,
             trackLead: data => window.__leadCalls.push(JSON.parse(JSON.stringify(data))),
             flush: () => {}, track: () => {}, trackPageView: () => {}, trackScrollDepth: () => {},
             trackCWV: () => {}, trackLeadFromForm: () => {}, checkFunnelStep: () => {}, destroy: () => {}, getUserId: () => 'test'
           };
+          window.acrTracker = window.__tracker;
           document.addEventListener('submit', () => window.__nativeSubmits++, true);
         """
         context.route('https://acrtracking.stealthagents.us/v1/tracker.js', lambda route: route.fulfill(status=200, content_type='application/javascript', body=stub))
@@ -66,9 +67,21 @@ def main():
         page.locator('[name="positions_to_fill"]').select_option(label='2 to 3')
         page.locator('[name="referral_source"]').select_option(label='Search engine')
 
+        page.evaluate('delete window.acrTracker')
+        submit.click()
+        tracker_error = page.locator('.form-error[role="alert"]')
+        tracker_error.wait_for(state='visible', timeout=5000)
+        if 'inquiry service is temporarily unavailable' not in tracker_error.inner_text().lower():
+            failures.append('missing tracker was not described truthfully')
+        if api_requests:
+            failures.append('missing tracker generated an API request')
+        if not page.url.endswith('/contact-us'):
+            failures.append('missing tracker navigated away from the form')
+        page.evaluate('window.acrTracker = window.__tracker')
+
         submit.click()
         delivery_error = page.locator('.form-error[role="alert"]')
-        delivery_error.wait_for(state='visible', timeout=5000)
+        page.wait_for_function("document.querySelector('.form-error[role=\\\"alert\\\"]')?.textContent?.startsWith('We could not deliver')", timeout=5000)
         if not delivery_error.inner_text().startswith('We could not deliver'):
             failures.append('delivery failure was not described truthfully')
         if not page.url.endswith('/contact-us'):
@@ -93,6 +106,7 @@ def main():
 
     summary = {
         'interceptedApiRequests': len(api_requests),
+        'missingTrackerStayedOnForm': 'missing tracker navigated away from the form' not in failures,
         'failedDeliveryStayedOnForm': True if not failures or 'failed delivery navigated away from the form' not in failures else False,
         'nativeSubmitEvents': native_submits,
         'deliveredLeadAnalyticsCalls': len(lead_calls),
