@@ -15,8 +15,19 @@ export type Service = {
   faq: FAQ[];
   reading: { label: string; href: string }[];
 };
-export type BlogPost = { slug: string; title: string; description: string; category: string; publishedAt: string; readTime: string; thumbnail?: string; sections: { heading: string; paragraphs: string[] }[]; faq: FAQ[]; internalService: string; internalSibling: string; source: { label: string; url: string } };
-export type ResearchPost = { slug: string; title: string; summary: string; cluster: string; publishedAt: string; finding: string; thumbnail?: string; methodology?: string; sections?: { heading: string; paragraphs: string[] }[]; faq?: FAQ[]; sources: { label: string; url: string }[] };
+export type ArticleSection = { heading: string; paragraphs: string[] };
+export type RelatedArticle = { label: string; href: string };
+export type EditorialFields = {
+  indexable?: boolean;
+  keyTakeaway?: string;
+  conclusion?: string;
+  relatedService?: string;
+  relatedArticles?: RelatedArticle[];
+  sourceContext?: string;
+  archiveCanonical?: string;
+};
+export type BlogPost = EditorialFields & { slug: string; title: string; description: string; category: string; publishedAt: string; readTime: string; thumbnail?: string; sections: ArticleSection[]; faq: FAQ[]; internalService: string; internalSibling: string; source: { label: string; url: string } };
+export type ResearchPost = EditorialFields & { slug: string; title: string; summary: string; cluster: string; publishedAt: string; finding: string; thumbnail?: string; methodology?: string; sections?: ArticleSection[]; faq?: FAQ[]; sources: { label: string; url: string }[] };
 export type SiteConfig = {
   name: string; domain: string; siteId: string; niche: string; audience: string; design: string;
   eyebrow: string; hero: string; heroAccent: string; heroBody: string; manifesto: string;

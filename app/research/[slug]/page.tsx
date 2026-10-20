@@ -1,8 +1,37 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { researchPosts,researchBySlug } from '@/lib/content';
+import { EditorialArticle } from '@/components/EditorialArticle';
+import { researchPosts, researchBySlug } from '@/lib/content';
 import { site } from '@/lib/site';
-export function generateStaticParams(){return researchPosts.map(({slug})=>({slug}))}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const post=researchBySlug(slug);return post?{title:post.title,description:post.summary,alternates:{canonical:`/research/${post.slug}`}}:{} }
-export default async function ResearchPostPage({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const post=researchBySlug(slug);if(!post)notFound();const related=researchPosts.filter((item)=>item.slug!==post.slug).slice(0,3);return <main><header className="page-hero"><p className="eyebrow">Home / Research / {post.cluster}</p><h1>{post.title}</h1><p>{post.summary}</p><p className="meta">{site.name} Editorial Team · Published {post.publishedAt}</p>{post.thumbnail&&<img className="detail-thumbnail" src={post.thumbnail} alt={`${post.title} research thumbnail`} />}</header><section className="content-wrap article-layout"><article className="prose"><p className="research-finding">{post.finding}</p>{post.sections?.map((section)=><section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph)=><p key={paragraph}>{paragraph}</p>)}</section>)||<><h2>What this brief examines</h2><p>This brief connects public guidance with operating questions for role design and review.</p></>}<h2>Method note</h2><p>{post.methodology||'We reviewed the public sources below and translated recurring operational ideas into role design questions.'}</p><div className="sources"><h2>Sources</h2><ol>{post.sources.map((source)=><li key={source.url}><a href={source.url} rel="noopener noreferrer">{source.label}</a></li>)}</ol></div>{post.faq&&<><h2>Common questions answered</h2>{post.faq.map((item)=><div key={item.q}><h3>{item.q}</h3><p>{item.a}</p></div>)}</>}<Link id="cta-research-final-bookcall" className="button primary" href="/contact-us">Discuss your workflow in a free call</Link></article><aside className="sidebar"><p className="eyebrow">Related research</p>{related.map((item)=><p key={item.slug}><Link href={`/research/${item.slug}`}>{item.title}</Link></p>)}</aside></section></main>}
+
+export function generateStaticParams() { return researchPosts.map(({ slug }) => ({ slug })); }
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = researchBySlug(slug);
+  if (!post) return {};
+  const path = post.indexable ? `/research/${post.slug}` : (post.archiveCanonical || '/research');
+  const image = post.indexable && post.thumbnail ? `https://${site.domain}${post.thumbnail}` : undefined;
+  return {
+    title: post.title,
+    description: post.summary,
+    alternates: { canonical: `https://${site.domain}${path}` },
+    robots: post.indexable ? { index: true, follow: true } : { index: false, follow: true },
+    openGraph: { type: 'article', url: `https://${site.domain}/research/${post.slug}`, title: post.title, description: post.summary, ...(image ? { images: [{ url: image, alt: post.title }] } : {}) },
+    twitter: { card: image ? 'summary_large_image' : 'summary', title: post.title, description: post.summary, ...(image ? { images: [image] } : {}) },
+  };
+}
+
+export default async function ResearchPostPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const post = researchBySlug(slug);
+  if (!post) notFound();
+  return <EditorialArticle
+    kind="Research" slug={post.slug} title={post.title} description={post.summary} category={post.cluster}
+    publishedAt={post.publishedAt} indexable={post.indexable === true} thumbnail={post.thumbnail}
+    keyTakeaway={post.keyTakeaway || post.finding} sections={post.sections || []} faq={post.faq || []}
+    conclusion={post.conclusion} methodology={post.methodology} sources={post.sources}
+    sourceContext={post.sourceContext} relatedService={post.relatedService} relatedArticles={post.relatedArticles}
+    archiveCanonical={post.archiveCanonical}
+  />;
+}

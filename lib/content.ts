@@ -2,6 +2,7 @@ import { site } from './site';
 import type { BlogPost, ResearchPost } from './types';
 import { october12BlogPosts } from './october12-blog';
 import { october12ResearchPosts } from './october12-research';
+import { curatedBlogPosts, curatedResearchPosts } from './curated-content';
 
 const legacyBlogPosts: BlogPost[] = [
   {
@@ -913,8 +914,32 @@ const legacyResearchPosts: ResearchPost[] = [
   }
 ];
 
-export const blogPosts: BlogPost[] = [...october12BlogPosts, ...legacyBlogPosts];
-export const researchPosts: ResearchPost[] = [...october12ResearchPosts, ...legacyResearchPosts];
+const blogArchiveGuide = '/blog/care-coordination-work-queue-ownership';
+const researchArchiveGuide = '/research/care-handoff-completeness-measurement';
+
+function applyEditorialPolicy<T extends { slug: string }>(
+  records: T[],
+  curated: T[],
+  archiveCanonical: string,
+): T[] {
+  const curatedBySlug = new Map(curated.map((record) => [record.slug, record]));
+  return records.map((record) => curatedBySlug.get(record.slug) ?? {
+    ...record,
+    indexable: false,
+    archiveCanonical,
+  });
+}
+
+export const blogPosts: BlogPost[] = applyEditorialPolicy(
+  [...october12BlogPosts, ...legacyBlogPosts],
+  curatedBlogPosts,
+  blogArchiveGuide,
+);
+export const researchPosts: ResearchPost[] = applyEditorialPolicy(
+  [...october12ResearchPosts, ...legacyResearchPosts],
+  curatedResearchPosts,
+  researchArchiveGuide,
+);
 
 export const nav = [
   { href: '/', label: 'Home' },
@@ -922,10 +947,10 @@ export const nav = [
   { href: '/contact-us', label: 'Contact Us' },
 ];
 
-/* Legacy routes remain available, but only the fully sourced illustrated releases
-   are indexable. This prevents thin historical pages from entering the sitemap. */
-export const indexableBlogPosts = blogPosts.filter((post) => Boolean(post.thumbnail));
-export const indexableResearchPosts = researchPosts.filter((post) => Boolean(post.thumbnail));
+/* Every historical path remains available. Only records that passed the curated
+   editorial review are discoverable and indexable. */
+export const indexableBlogPosts = blogPosts.filter((post) => post.indexable === true);
+export const indexableResearchPosts = researchPosts.filter((post) => post.indexable === true);
 
 export function serviceBySlug(slug: string) { return site.services.find((service) => service.slug === slug); }
 export function blogBySlug(slug: string) { return blogPosts.find((post) => post.slug === slug); }
