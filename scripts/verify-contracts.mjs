@@ -72,6 +72,11 @@ for (const match of curated.matchAll(/thumbnail: '([^']+)'/g)) {
   check(fs.existsSync(path.join(root, 'public', match[1].replace(/^\//, ''))), `Missing editorial asset ${match[1]}`);
 }
 
+const canonicalProxy = read('proxy.ts');
+check(canonicalProxy.includes("request.headers.get('cf-visitor')"), 'Canonical proxy must honor Cloudflare visitor scheme');
+check(canonicalProxy.includes("JSON.parse(cloudflareVisitor)?.scheme"), 'Cloudflare visitor scheme must be parsed as JSON');
+check(canonicalProxy.includes("new URL(`https://${apex}`)"), 'Canonical redirect must use a fixed destination origin');
+
 const layout = read('app/layout.tsx');
 check(layout.includes('acrtracking.stealthagents.us/v1/tracker.js'), 'Central tracker script missing');
 check(!/modal|popup/i.test(siteChrome + read('components/Marketing.tsx')), 'Timed modal or popup marker returned');

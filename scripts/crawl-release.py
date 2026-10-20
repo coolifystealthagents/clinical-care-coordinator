@@ -131,6 +131,12 @@ def main():
     if redirect.status != 308 or redirect.getheader('Location') != f'https://{DOMAIN}/about':
         failures.append(f'http redirect failed: {redirect.status} {redirect.getheader("Location")}')
 
+    connection = http.client.HTTPConnection(parsed_base.hostname, parsed_base.port, timeout=20)
+    connection.request('GET', '/about?source=cloudflare', headers={'Host': DOMAIN, 'X-Forwarded-Host': DOMAIN, 'X-Forwarded-Proto': 'https', 'CF-Visitor': '{"scheme":"http"}'})
+    redirect = connection.getresponse(); redirect.read(); connection.close()
+    if redirect.status != 308 or redirect.getheader('Location') != f'https://{DOMAIN}/about?source=cloudflare':
+        failures.append(f'Cloudflare HTTP redirect failed: {redirect.status} {redirect.getheader("Location")}')
+
     status, _, _ = request(base + '/api/submit-lead', method='POST', headers={'Origin': 'https://invalid.example', 'X-Requested-With': 'clinical-care-contact-form', 'Content-Type': 'multipart/form-data; boundary=x'}, data=b'--x--\r\n')
     if status != 403: failures.append(f'lead cross-origin guard expected 403, got {status}')
     wrong_payload = json.dumps({'site_id': 'wrong-site', 'events': [{'event_type': 'pageview', 'timestamp': '2026-01-01T00:00:00Z'}]}).encode()

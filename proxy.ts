@@ -3,18 +3,32 @@ import { NextRequest, NextResponse } from 'next/server';
 const apex = 'clinicalcarecoordinator.com';
 const productionHosts = new Set([apex, `www.${apex}`]);
 
+function visitorScheme(request: NextRequest) {
+  const cloudflareVisitor = request.headers.get('cf-visitor');
+  if (cloudflareVisitor) {
+    try {
+      const scheme = JSON.parse(cloudflareVisitor)?.scheme;
+      if (scheme === 'http' || scheme === 'https') return scheme;
+    } catch {
+      // Fall through to the trusted proxy/framework scheme.
+    }
+  }
+
+  const forwarded = request.headers.get('x-forwarded-proto')?.split(',')[0].trim().toLowerCase();
+  if (forwarded === 'http' || forwarded === 'https') return forwarded;
+  return request.nextUrl.protocol === 'http:' ? 'http' : 'https';
+}
+
 export function proxy(request: NextRequest) {
   const forwardedHost = request.headers.get('x-forwarded-host') || request.headers.get('host') || '';
   const host = forwardedHost.split(',')[0].trim().toLowerCase().split(':')[0];
   if (!productionHosts.has(host)) return NextResponse.next();
 
-  const forwardedProto = (request.headers.get('x-forwarded-proto') || request.nextUrl.protocol.replace(':', '')).split(',')[0].trim();
-  if (host === apex && forwardedProto === 'https') return NextResponse.next();
+  if (host === apex && visitorScheme(request) === 'https') return NextResponse.next();
 
-  const canonical = request.nextUrl.clone();
-  canonical.protocol = 'https:';
-  canonical.host = apex;
-  canonical.port = '';
+  const canonical = new URL(`https://${apex}`);
+  canonical.pathname = request.nextUrl.pathname;
+  canonical.search = request.nextUrl.search;
   return NextResponse.redirect(canonical, 308);
 }
 
