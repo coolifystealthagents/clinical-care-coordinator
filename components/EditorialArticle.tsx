@@ -98,7 +98,7 @@ export function EditorialArticle(props: EditorialArticleProps) {
           <p className="eyebrow">{props.category}</p>
           <h1>{props.title}</h1>
           <p className="article-deck">{props.description}</p>
-          <p className="meta">By {site.name} Editorial Team · Published {props.publishedAt}</p>
+          <p className="meta">By {site.name} Editorial Team · <time dateTime={props.publishedAt}>{`Published ${new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${props.publishedAt}T00:00:00Z`))}`}</time></p>
         </div>
         {props.thumbnail && <figure className="topic-image"><img src={props.thumbnail} alt={`${props.title} topic illustration`} /></figure>}
       </div>
