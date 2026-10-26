@@ -7,6 +7,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A triage standard for clinical care coordination and patient follow-up that captures the request, checks authority, and finds existing work before a new item is created.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/request-triage-standard.svg",
     "sections": [
@@ -156,6 +157,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A capacity model for clinical care coordination and patient follow-up that compares work volume, handling time, rework, and available hours before promises are made.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/capacity-plan.svg",
     "sections": [
@@ -305,6 +307,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A completeness gate for clinical care coordination and patient follow-up that names the required documents, checks version and signature, and returns gaps without rework.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/document-completeness.svg",
     "sections": [
@@ -454,6 +457,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A client update rhythm for clinical care coordination and patient follow-up that ties the message to the work state and keeps commitments with the owner.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/client-update-cadence.svg",
     "sections": [
@@ -603,6 +607,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A supplier follow-up log for clinical care coordination and patient follow-up that keeps one request, one reference, and one next date per issue.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/supplier-followup.svg",
     "sections": [
@@ -752,6 +757,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A recurring-work calendar for clinical care coordination and patient follow-up that records the frequency rule, the owner, the backup, and the completion evidence.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/recurring-task-calendar-control.svg",
     "sections": [
@@ -901,6 +907,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A duplicate check for clinical care coordination and patient follow-up that uses two identifiers, holds both records, and leaves the merge decision with the owner.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/duplicate-detection.svg",
     "sections": [
@@ -1050,6 +1057,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "An approval routing rule for clinical care coordination and patient follow-up that publishes the threshold, captures the value, and names a backup approver.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/approval-threshold.svg",
     "sections": [
@@ -1199,6 +1207,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A decision log for clinical care coordination and patient follow-up that records the options, evidence, owner, rationale, and what the decision supersedes.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/decision-log.svg",
     "sections": [
@@ -1348,6 +1357,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A change communication pack for clinical care coordination and patient follow-up that names the effective date, affected roles, training, and rollback.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/change-communication.svg",
     "sections": [
@@ -1497,6 +1507,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A work-instruction refresh cycle for clinical care coordination and patient follow-up that assigns an owner, checks the source version, and confirms readers saw the update.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/knowledge-refresh.svg",
     "sections": [
@@ -1646,6 +1657,7 @@ export const october26BlogPosts: BlogPost[] = [
     "description": "A month-end close for clinical care coordination and patient follow-up that freezes the period, reconciles counts, lists exceptions, and records owner sign-off.",
     "category": "Care coordination",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "readTime": "11 min read",
     "thumbnail": "/thumbnails/october-26/month-end-close.svg",
     "sections": [

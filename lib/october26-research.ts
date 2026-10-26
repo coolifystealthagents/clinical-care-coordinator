@@ -7,6 +7,7 @@ export const october26ResearchPosts: ResearchPost[] = [
     "summary": "A protocol for measuring whether independent reviewers assign the same triage class and owner to the same clinical care coordination and patient follow-up request.",
     "cluster": "Evidence review",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "finding": "Do two reviewers assign the same triage class and owner to the same request? The scope is the operational record for clinical care coordination and patient follow-up, not the legal, financial, or clinical conclusion that may follow.",
     "thumbnail": "/thumbnails/october-26/triage-accuracy.svg",
     "sections": [
@@ -246,6 +247,7 @@ export const october26ResearchPosts: ResearchPost[] = [
     "summary": "A protocol separating planned work, exceptions, rework, and waiting in a clinical care coordination and patient follow-up team's available hours.",
     "cluster": "Evidence review",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "finding": "How much available time goes to planned work, exceptions, rework, and waiting? The scope is the operational record for clinical care coordination and patient follow-up, not the legal, financial, or clinical conclusion that may follow.",
     "thumbnail": "/thumbnails/october-26/capacity-variance.svg",
     "sections": [
@@ -485,6 +487,7 @@ export const october26ResearchPosts: ResearchPost[] = [
     "summary": "A protocol measuring which required fields are missing at first review and what causes the return.",
     "cluster": "Evidence review",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "finding": "Which required fields are missing at first review, and what causes the file to be returned? The scope is the operational record for clinical care coordination and patient follow-up, not the legal, financial, or clinical conclusion that may follow.",
     "thumbnail": "/thumbnails/october-26/completeness-return.svg",
     "sections": [
@@ -724,6 +727,7 @@ export const october26ResearchPosts: ResearchPost[] = [
     "summary": "A protocol testing whether sampled clinical care coordination and patient follow-up approvals used the level required by the written threshold.",
     "cluster": "Evidence review",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "finding": "What share of sampled approvals were made at the level required by the threshold in force at the time? The scope is the operational record for clinical care coordination and patient follow-up, not the legal, financial, or clinical conclusion that may follow.",
     "thumbnail": "/thumbnails/october-26/threshold-compliance.svg",
     "sections": [
@@ -963,6 +967,7 @@ export const october26ResearchPosts: ResearchPost[] = [
     "summary": "A protocol comparing records before and after a written clinical care coordination and patient follow-up process change to see whether the new step was used.",
     "cluster": "Evidence review",
     "publishedAt": "2026-10-26",
+    "indexable": true,
     "finding": "After a written process change, did the affected records follow the new step? The scope is the operational record for clinical care coordination and patient follow-up, not the legal, financial, or clinical conclusion that may follow.",
     "thumbnail": "/thumbnails/october-26/change-adoption.svg",
     "sections": [
