@@ -21,7 +21,7 @@ export default function ResearchPage() {
       <div className="cluster-heading"><p className="eyebrow">{cluster}</p><h2>{cluster.replace(' research', '')}</h2><p>Each brief states its question, operational method, protected boundary, limitations, and public source context.</p></div>
       <div className="content-grid">{indexableResearchPosts.filter((post) => post.cluster === cluster).map((post) => <Link className="content-card" href={`/research/${post.slug}`} key={post.slug}>
         {post.thumbnail && <img className="content-thumbnail" src={post.thumbnail} alt={`${post.title} research illustration`} />}
-        <span className="pill">{post.cluster}</span><h3>{post.title}</h3><p>{post.summary}</p><p className="research-card-finding"><strong>Focus:</strong> {post.finding}</p><span className="text-link">Read the brief</span>
+        <span className="pill">{post.cluster}</span><h3>{post.title}</h3><p>{post.summary}</p><p className="meta">Published <time dateTime={post.publishedAt}>{post.publishedAt}</time></p><p className="research-card-finding"><strong>Focus:</strong> {post.finding}</p><span className="text-link">Read the brief</span>
       </Link>)}</div>
     </section>)}
     <section className="collection-context research-context"><div><p className="eyebrow">Evidence policy</p><h2>Administrative findings stay administrative.</h2></div><p>The library does not present workflow completion, routing, acknowledgment, or elapsed time as proof of clinical quality, safety, urgency, appropriateness, compliance, or patient outcomes. Sources retain their original scope, and qualified owners must assess local applicability.</p></section>
