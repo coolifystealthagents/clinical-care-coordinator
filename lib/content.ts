@@ -3,7 +3,9 @@ import type { BlogPost, ResearchPost } from './types';
 import { october12BlogPosts } from './october12-blog';
 import { october12ResearchPosts } from './october12-research';
 import { october22BlogPosts } from './october22-blog';
+import { october25BlogPosts } from './october25-blog';
 import { october22ResearchPosts } from './october22-research';
+import { october25ResearchPosts } from './october25-research';
 import { curatedBlogPosts, curatedResearchPosts } from './curated-content';
 
 const legacyBlogPosts: BlogPost[] = [
@@ -933,13 +935,13 @@ function applyEditorialPolicy<T extends { slug: string }>(
 }
 
 export const blogPosts: BlogPost[] = applyEditorialPolicy(
-  [...october22BlogPosts, ...october12BlogPosts, ...legacyBlogPosts],
-  [...october22BlogPosts, ...curatedBlogPosts],
+  [...october25BlogPosts, ...october22BlogPosts, ...october12BlogPosts, ...legacyBlogPosts],
+  [...october25BlogPosts, ...october22BlogPosts, ...curatedBlogPosts],
   blogArchiveGuide,
 );
 export const researchPosts: ResearchPost[] = applyEditorialPolicy(
-  [...october22ResearchPosts, ...october12ResearchPosts, ...legacyResearchPosts],
-  [...october22ResearchPosts, ...curatedResearchPosts],
+  [...october25ResearchPosts, ...october22ResearchPosts, ...october12ResearchPosts, ...legacyResearchPosts],
+  [...october25ResearchPosts, ...october22ResearchPosts, ...curatedResearchPosts],
   researchArchiveGuide,
 );
 
