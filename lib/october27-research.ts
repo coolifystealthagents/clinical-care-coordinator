@@ -8,7 +8,7 @@ export const october27ResearchPosts: ResearchPost[] = [
     "cluster": "Evidence review",
     "publishedAt": "2026-10-27",
     "indexable": true,
-    "finding": "Do two reviewers put the same item in the same priority band using the written scoring rule?",
+    "finding": "A protocol testing whether independent reviewers assign the same priority band to the same clinical care coordination and patient follow-up item. The clinicalcarecoordinator review should show the source, owner, next action, and exception reason for this do reviewers agree on work priority in clinical care coordination and patient follow-up? workflow before the item moves.",
     "thumbnail": "/thumbnails/october-27/priority-agreement-study.svg",
     "sections": [
       {
@@ -248,7 +248,7 @@ export const october27ResearchPosts: ResearchPost[] = [
     "cluster": "Evidence review",
     "publishedAt": "2026-10-27",
     "indexable": true,
-    "finding": "How often does the recorded clock start match the defined triggering event?",
+    "finding": "A protocol measuring the gap between the defined clock event and the timestamp recorded in clinical care coordination and patient follow-up. The clinicalcarecoordinator review should show the source, owner, next action, and exception reason for this when does the service clock start in clinical care coordination and patient follow-up? workflow before the item moves.",
     "thumbnail": "/thumbnails/october-27/service-clock-start-study.svg",
     "sections": [
       {
@@ -488,7 +488,7 @@ export const october27ResearchPosts: ResearchPost[] = [
     "cluster": "Evidence review",
     "publishedAt": "2026-10-27",
     "indexable": true,
-    "finding": "How much delay comes from an upstream input, an internal owner, or a rework loop?",
+    "finding": "A protocol separating upstream wait, owner wait, and rework in clinical care coordination and patient follow-up dependency chains. The clinicalcarecoordinator review should show the source, owner, next action, and exception reason for this where do dependencies add delay in clinical care coordination and patient follow-up? workflow before the item moves.",
     "thumbnail": "/thumbnails/october-27/dependency-delay-study.svg",
     "sections": [
       {
@@ -728,7 +728,7 @@ export const october27ResearchPosts: ResearchPost[] = [
     "cluster": "Evidence review",
     "publishedAt": "2026-10-27",
     "indexable": true,
-    "finding": "What share of handled items is rework, and which reason codes explain it?",
+    "finding": "A protocol measuring repeat effort caused by missing evidence, wrong scope, or a failed check in clinical care coordination and patient follow-up. The clinicalcarecoordinator review should show the source, owner, next action, and exception reason for this how much work is rework in clinical care coordination and patient follow-up? workflow before the item moves.",
     "thumbnail": "/thumbnails/october-27/rework-share-study.svg",
     "sections": [
       {
@@ -968,7 +968,7 @@ export const october27ResearchPosts: ResearchPost[] = [
     "cluster": "Evidence review",
     "publishedAt": "2026-10-27",
     "indexable": true,
-    "finding": "What share of recorded customer promises were verified by the promised date?",
+    "finding": "A protocol comparing the promise date, the verified completion, and the reason for any gap in clinical care coordination and patient follow-up. The clinicalcarecoordinator review should show the source, owner, next action, and exception reason for this how often do customer promises hold in clinical care coordination and patient follow-up? workflow before the item moves.",
     "thumbnail": "/thumbnails/october-27/promise-accuracy-study.svg",
     "sections": [
       {
