@@ -11,12 +11,20 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const categories = [...new Set(indexableBlogPosts.map((post) => post.category))];
+  const latest = indexableBlogPosts.filter((post) => post.publishedAt === '2026-10-28');
   return <main id="main-content">
     <header className="collection-hero blog-collection-hero">
       <div><p className="eyebrow">Implementation guides</p><h1>Build administrative workflows that show their boundaries.</h1><p>Each reviewed guide turns one recurring care operations problem into a practical role, evidence trail, exception path, and review checklist.</p></div>
       <aside><strong>Use this collection to</strong><ul><li>Define permitted administrative tasks</li><li>Protect licensed and authorized decisions</li><li>Make ownership and exceptions inspectable</li></ul></aside>
     </header>
     <section className="collection-nav" aria-labelledby="browse-guides"><div><p className="eyebrow">Browse by work area</p><h2 id="browse-guides">Choose the workflow you need to clarify.</h2></div><nav>{categories.map((category) => <a key={category} href={`#${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>{category}</a>)}</nav></section>
+    {latest.length > 0 && <section className="collection-cluster" id="latest-guides" key="latest-guides">
+      <div className="cluster-heading"><p className="eyebrow">Latest guides</p><h2>New care coordination workflows</h2><p>The newest reviewed guides, shown first. The full library remains organized by work area below.</p></div>
+      <div className="article-grid">{latest.map((post) => <Link className="article-card" href={`/blog/${post.slug}`} key={post.slug}>
+        {post.thumbnail && <img className="content-thumbnail" src={post.thumbnail} alt={`${post.title} topic illustration`} />}
+        <span className="pill">{post.category}</span><h3>{post.title}</h3><p>{post.description}</p><p className="meta">Published {post.publishedAt} · {post.readTime}</p><span className="text-link">Read the guide</span>
+      </Link>)}</div>
+    </section>}
     {categories.map((category) => <section className="collection-cluster" id={category.toLowerCase().replace(/[^a-z0-9]+/g, '-')} key={category}>
       <div className="cluster-heading"><p className="eyebrow">{category}</p><h2>{category} guides</h2><p>Reviewed guidance with implementation steps, scope limits, source context, and questions leaders can use in workflow review.</p></div>
       <div className="article-grid">{indexableBlogPosts.filter((post) => post.category === category).map((post) => <Link className="article-card" href={`/blog/${post.slug}`} key={post.slug}>
