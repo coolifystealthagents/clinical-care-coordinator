@@ -1,0 +1,20 @@
+/* Local confirmation surface. Preserve the site's typography, palette and controls. */
+.confirmation-page{width:min(1180px,90vw);margin:0 auto}
+.confirmation-hero{padding:clamp(2.5rem,5vw,4.5rem) 0 3rem;max-width:800px}
+.confirmation-hero .eyebrow{color:var(--pine)}
+.confirmation-hero h1{font-size:clamp(2.6rem,5vw,4.5rem);max-width:17ch}
+.confirmation-hero>p:not(.eyebrow){max-width:58ch;color:var(--slate)}
+.confirmation-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem 1.8rem;margin-top:1.8rem}
+.confirmation-actions a{display:inline-flex;align-items:center;min-height:44px}
+.confirmation-next{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,6vw,5rem);border-top:1px solid var(--line);padding:3rem 0}
+.confirmation-next h2,.confirmation-safeguards h2{font-size:clamp(1.9rem,3vw,2.7rem)}
+.confirmation-access{margin-top:2rem;padding-left:1.2rem;border-left:3px solid var(--pine)}
+.confirmation-access h3{font-family:Arial,sans-serif;font-size:1rem;letter-spacing:0;line-height:1.4}
+.confirmation-access p{font-size:.95rem;margin:0}
+.confirmation-preparation h3:not(:first-child){margin-top:1.6rem}
+.confirmation-preparation p:last-child{margin-bottom:0}
+.confirmation-safeguards{margin:0 0 4rem;padding:clamp(1.4rem,3vw,2.5rem);background:#e6ede8}
+.confirmation-safeguards p{max-width:80ch}
+.confirmation-boundary{font-weight:700;margin-bottom:0}
+@media(max-width:767px){.confirmation-next{grid-template-columns:1fr;gap:2rem;padding:2rem 0}.confirmation-hero{padding:2.5rem 0 2rem}.confirmation-safeguards{margin-bottom:3rem}}
+@media(max-width:380px){.confirmation-page{width:92vw}.confirmation-hero h1{font-size:2.45rem}.confirmation-actions{gap:.7rem 1.4rem}}

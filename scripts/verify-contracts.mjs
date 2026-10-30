@@ -45,7 +45,10 @@ check(form.includes("fetch('/api/submit-lead'"), 'First-party validation endpoin
 const config = read('public/acr-config.js');
 check(config.includes("siteId: 'clinical-care-coordinator'"), 'ACR site ID changed');
 check(config.includes("endpoint: '/ingest/track'"), 'ACR proxy endpoint changed');
-check(config.includes('funnelSteps:') && !config.includes('thanks-whats-next'), 'Tracker funnel must not classify the preparation page as a confirmed booking');
+check(config.includes('funnelSteps:') && !config.includes('thanks-whats-next'), 'Direct confirmation visits must not be classified as bookings');
+const confirmation = read('app/thanks-whats-next/page.tsx');
+check(!/use client|<Script|<iframe|<form|trackLead|trackEvent|useEffect|searchParams/.test(confirmation), 'Confirmation must remain passive server-rendered content');
+check(!thankYou.includes('href="/thanks-whats-next"') && thankYou.includes('id="prepare"') && thankYou.includes('href="#prepare"'), 'Pre-booking preparation must not link to booking confirmation');
 const proxy = read('app/ingest/track/route.ts');
 check(proxy.includes("payload.site_id !== SITE_ID"), 'ACR site envelope validation missing');
 check(proxy.includes('MAX_BATCH_ITEMS = 200'), 'ACR replay capacity must match tracker backlog contract');
