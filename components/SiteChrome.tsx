@@ -24,7 +24,6 @@ export function Header() {
         <Link className="brand" href="/" aria-label={`${site.name} home`}>
           <Image src="/logo.svg" alt="" width={42} height={42} priority />
           <span className="brand-full">{site.name}</span>
-          <span className="brand-compact">CCC</span>
         </Link>
         <nav id="primary-menu" aria-label="Primary navigation" className={open ? 'open' : ''}>
           {nav.map((item) => <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>)}

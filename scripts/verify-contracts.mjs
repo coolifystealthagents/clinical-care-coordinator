@@ -13,6 +13,16 @@ check(JSON.stringify(headerNav) === JSON.stringify([['/', 'Home'], ['/services',
 const siteChrome = read('components/SiteChrome.tsx');
 check((siteChrome.match(/<Attribution/g) || []).length === 2, 'Header and footer attribution must both remain present');
 check(siteChrome.includes('Skip to main content'), 'Skip link missing');
+check(!siteChrome.includes('brand-compact') && !siteChrome.includes('>CCC<'), 'Header must retain the full identity at mobile widths');
+
+const approvedMark = fs.readFileSync(path.join(root, 'public/logo.svg'));
+const appIcon = fs.readFileSync(path.join(root, 'app/icon.svg'));
+check(appIcon.equals(approvedMark), 'App icon must be an exact-byte reuse of the approved handoff mark');
+const defaultOgPath = path.join(root, 'public/brand/clinical-care-coordinator-open-graph.png');
+check(fs.existsSync(defaultOgPath), 'Dedicated default Open Graph identity image missing');
+const defaultOg = fs.readFileSync(defaultOgPath);
+check(defaultOg.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10])), 'Default Open Graph identity image must be PNG');
+check(defaultOg.readUInt32BE(16) === 1200 && defaultOg.readUInt32BE(20) === 630, 'Default Open Graph identity image must be 1200x630');
 
 const appFiles = [];
 function collect(dir) {
