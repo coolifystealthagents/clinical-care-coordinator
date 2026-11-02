@@ -1,0 +1,24 @@
+{
+ "date": "2026-11-02",
+ "blog": [
+  "clinicalcarecoordinator-referral-intake-2026-11-02",
+  "clinicalcarecoordinator-patient-scheduling-2026-11-02",
+  "clinicalcarecoordinator-care-plan-update-2026-11-02",
+  "clinicalcarecoordinator-clinical-inbox-2026-11-02",
+  "clinicalcarecoordinator-discharge-followup-2026-11-02",
+  "clinicalcarecoordinator-prior-authorization-2026-11-02",
+  "clinicalcarecoordinator-appointment-reminder-2026-11-02",
+  "clinicalcarecoordinator-record-request-2026-11-02",
+  "clinicalcarecoordinator-care-team-notes-2026-11-02",
+  "clinicalcarecoordinator-medication-reconciliation-2026-11-02",
+  "clinicalcarecoordinator-eligibility-check-2026-11-02",
+  "clinicalcarecoordinator-home-visit-confirmation-2026-11-02"
+ ],
+ "research": [
+  "clinicalcarecoordinator-referral-intake-completeness-study-2026-11-02",
+  "clinicalcarecoordinator-scheduling-delay-study-2026-11-02",
+  "clinicalcarecoordinator-discharge-followup-completion-study-2026-11-02",
+  "clinicalcarecoordinator-prior-authorization-turnaround-study-2026-11-02",
+  "clinicalcarecoordinator-care-plan-update-lag-study-2026-11-02"
+ ]
+}
