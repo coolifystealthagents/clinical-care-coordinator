@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const categories = [...new Set(indexableBlogPosts.map((post) => post.category))];
-  const latest = indexableBlogPosts.filter((post) => post.publishedAt === '2026-10-28');
+  const latestDate = indexableBlogPosts.reduce((max, post) => (post.publishedAt > max ? post.publishedAt : max), '');
+  const latest = indexableBlogPosts.filter((post) => post.publishedAt === latestDate);
   return <main id="main-content">
     <header className="collection-hero blog-collection-hero">
       <div><p className="eyebrow">Implementation guides</p><h1>Build administrative workflows that show their boundaries.</h1><p>Each reviewed guide turns one recurring care operations problem into a practical role, evidence trail, exception path, and review checklist.</p></div>
