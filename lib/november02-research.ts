@@ -13,35 +13,35 @@ export const november02ResearchPosts: readonly ResearchPost[] = [
    {
     "heading": "Research question and scope",
     "paragraphs": [
-     "This study asks how referrals missing a required clinical field behave in a defined operating window. The scope is the referral intake completeness record for a clinical care team, not the legal, financial, or employment conclusion that may follow.",
+     "This study asks how referrals missing a required clinical field behave in a defined operating window. The scope is the referral intake completeness record for a clinical care team, not the legal, financial, or employment conclusion that may follow. Every count in this review stays attached to the referral intake completeness case and the coordinator who accepted it.",
      "The question is narrow on purpose. Clinical Care Coordinator reports what the record can show for care organizations and clinical operations leaders and states where the evidence stops."
     ]
    },
    {
     "heading": "Population and unit of analysis",
     "paragraphs": [
-     "The population is the set of referral intake completeness cases opened in one quarter. The unit is one case and one accountable owner, so linked events are not counted as independent successes.",
+     "The population is the set of referral intake completeness cases opened in one quarter. The unit is one case and one accountable owner, so linked events are not counted as independent successes. This clinical sample excludes cases that cannot be tied to a patient record.",
      "Record the opening date, the source, the decision, the close date, and any reopened state. A clear unit keeps the denominator honest."
     ]
    },
    {
     "heading": "Definitions and measures",
     "paragraphs": [
-     "Define the start, the stop, the pause rule, and the missing-evidence treatment before collecting data. Measure referrals missing a required clinical field with the same rule for every case.",
+     "Define the start, the stop, the pause rule, and the missing-evidence treatment before collecting data. Measure referrals missing a required clinical field with the same rule for every case, and keep the clinical definition beside the count.",
      "A count needs its denominator and window before it becomes a measure. Publish the definitions with the result so a later reviewer can reproduce the number."
     ]
    },
    {
     "heading": "Evidence and limitations",
     "paragraphs": [
-     "Each case needs a dated source, the reviewer, the field that changed, and a note on anything unresolved. Keep missing, unavailable, and confirmed negative as separate states.",
+     "Each case needs a dated source, the reviewer, the field that changed, and a note on anything unresolved. Keep missing, unavailable, and confirmed negative as separate clinical states so the review does not confuse a blank with a negative.",
      "The limitation is structural: a clean record can prove that a step was documented, not that the underlying business judgement was correct."
     ]
    },
    {
     "heading": "What the team can do next",
     "paragraphs": [
-     "Use the result to fix one intake rule, one approval point, or one review cadence. Assign the change to a named owner and set a date to check whether rework fell.",
+     "Use the result to fix one intake rule, one approval point, or one review cadence. Assign the change to a named clinical owner and set a date to check whether rework fell.",
      "Clinical Care Coordinator recommends a small monthly sample rather than a one-time cleanup, because the process drifts when nobody checks the oldest open case."
     ]
    }
@@ -77,35 +77,35 @@ export const november02ResearchPosts: readonly ResearchPost[] = [
    {
     "heading": "Research question and scope",
     "paragraphs": [
-     "This study asks how scheduling requests waiting for a documented response behave in a defined operating window. The scope is the scheduling delay record for a clinical care team, not the legal, financial, or employment conclusion that may follow.",
+     "This study asks how scheduling requests waiting for a documented response behave in a defined operating window. The scope is the scheduling delay record for a clinical care team, not the legal, financial, or employment conclusion that may follow. Every count in this review stays attached to the scheduling delay case and the coordinator who accepted it.",
      "The question is narrow on purpose. Clinical Care Coordinator reports what the record can show for care organizations and clinical operations leaders and states where the evidence stops."
     ]
    },
    {
     "heading": "Population and unit of analysis",
     "paragraphs": [
-     "The population is the set of scheduling delay cases opened in one quarter. The unit is one case and one accountable owner, so linked events are not counted as independent successes.",
+     "The population is the set of scheduling delay cases opened in one quarter. The unit is one case and one accountable owner, so linked events are not counted as independent successes. This clinical sample excludes cases that cannot be tied to a patient record.",
      "Record the opening date, the source, the decision, the close date, and any reopened state. A clear unit keeps the denominator honest."
     ]
    },
    {
     "heading": "Definitions and measures",
     "paragraphs": [
-     "Define the start, the stop, the pause rule, and the missing-evidence treatment before collecting data. Measure scheduling requests waiting for a documented response with the same rule for every case.",
+     "Define the start, the stop, the pause rule, and the missing-evidence treatment before collecting data. Measure scheduling requests waiting for a documented response with the same rule for every case, and keep the clinical definition beside the count.",
      "A count needs its denominator and window before it becomes a measure. Publish the definitions with the result so a later reviewer can reproduce the number."
     ]
    },
    {
     "heading": "Evidence and limitations",
     "paragraphs": [
-     "Each case needs a dated source, the reviewer, the field that changed, and a note on anything unresolved. Keep missing, unavailable, and confirmed negative as separate states.",
+     "Each case needs a dated source, the reviewer, the field that changed, and a note on anything unresolved. Keep missing, unavailable, and confirmed negative as separate clinical states so the review does not confuse a blank with a negative.",
      "The limitation is structural: a clean record can prove that a step was documented, not that the underlying business judgement was correct."
     ]
    },
    {
     "heading": "What the team can do next",
     "paragraphs": [
-     "Use the result to fix one intake rule, one approval point, or one review cadence. Assign the change to a named owner and set a date to check whether rework fell.",
+     "Use the result to fix one intake rule, one approval point, or one review cadence. Assign the change to a named clinical owner and set a date to check whether rework fell.",
      "Clinical Care Coordinator recommends a small monthly sample rather than a one-time cleanup, because the process drifts when nobody checks the oldest open case."
     ]
    }
@@ -141,35 +141,35 @@ export const november02ResearchPosts: readonly ResearchPost[] = [
    {
     "heading": "Research question and scope",
     "paragraphs": [
-     "This study asks how discharge follow-ups completed after the promised date behave in a defined operating window. The scope is the discharge follow-up completion record for a clinical care team, not the legal, financial, or employment conclusion that may follow.",
+     "This study asks how discharge follow-ups completed after the promised date behave in a defined operating window. The scope is the discharge follow-up completion record for a clinical care team, not the legal, financial, or employment conclusion that may follow. Every count in this review stays attached to the discharge follow-up completion case and the coordinator who accepted it.",
      "The question is narrow on purpose. Clinical Care Coordinator reports what the record can show for care organizations and clinical operations leaders and states where the evidence stops."
     ]
    },
    {
     "heading": "Population and unit of analysis",
     "paragraphs": [
-     "The population is the set of discharge follow-up completion cases opened in one quarter. The unit is one case and one accountable owner, so linked events are not counted as independent successes.",
+     "The population is the set of discharge follow-up completion cases opened in one quarter. The unit is one case and one accountable owner, so linked events are not counted as independent successes. This clinical sample excludes cases that cannot be tied to a patient record.",
      "Record the opening date, the source, the decision, the close date, and any reopened state. A clear unit keeps the denominator honest."
     ]
    },
    {
     "heading": "Definitions and measures",
     "paragraphs": [
-     "Define the start, the stop, the pause rule, and the missing-evidence treatment before collecting data. Measure discharge follow-ups completed after the promised date with the same rule for every case.",
+     "Define the start, the stop, the pause rule, and the missing-evidence treatment before collecting data. Measure discharge follow-ups completed after the promised date with the same rule for every case, and keep the clinical definition beside the count.",
      "A count needs its denominator and window before it becomes a measure. Publish the definitions with the result so a later reviewer can reproduce the number."
     ]
    },
    {
     "heading": "Evidence and limitations",
     "paragraphs": [
-     "Each case needs a dated source, the reviewer, the field that changed, and a note on anything unresolved. Keep missing, unavailable, and confirmed negative as separate states.",
+     "Each case needs a dated source, the reviewer, the field that changed, and a note on anything unresolved. Keep missing, unavailable, and confirmed negative as separate clinical states so the review does not confuse a blank with a negative.",
      "The limitation is structural: a clean record can prove that a step was documented, not that the underlying business judgement was correct."
     ]
    },
    {
     "heading": "What the team can do next",
     "paragraphs": [
-     "Use the result to fix one intake rule, one approval point, or one review cadence. Assign the change to a named owner and set a date to check whether rework fell.",
+     "Use the result to fix one intake rule, one approval point, or one review cadence. Assign the change to a named clinical owner and set a date to check whether rework fell.",
      "Clinical Care Coordinator recommends a small monthly sample rather than a one-time cleanup, because the process drifts when nobody checks the oldest open case."
     ]
    }
@@ -205,35 +205,35 @@ export const november02ResearchPosts: readonly ResearchPost[] = [
    {
     "heading": "Research question and scope",
     "paragraphs": [
-     "This study asks how prior authorizations waiting for a payer decision behave in a defined operating window. The scope is the prior authorization turnaround record for a clinical care team, not the legal, financial, or employment conclusion that may follow.",
+     "This study asks how prior authorizations waiting for a payer decision behave in a defined operating window. The scope is the prior authorization turnaround record for a clinical care team, not the legal, financial, or employment conclusion that may follow. Every count in this review stays attached to the prior authorization turnaround case and the coordinator who accepted it.",
      "The question is narrow on purpose. Clinical Care Coordinator reports what the record can show for care organizations and clinical operations leaders and states where the evidence stops."
     ]
    },
    {
     "heading": "Population and unit of analysis",
     "paragraphs": [
-     "The population is the set of prior authorization turnaround cases opened in one quarter. The unit is one case and one accountable owner, so linked events are not counted as independent successes.",
+     "The population is the set of prior authorization turnaround cases opened in one quarter. The unit is one case and one accountable owner, so linked events are not counted as independent successes. This clinical sample excludes cases that cannot be tied to a patient record.",
      "Record the opening date, the source, the decision, the close date, and any reopened state. A clear unit keeps the denominator honest."
     ]
    },
    {
     "heading": "Definitions and measures",
     "paragraphs": [
-     "Define the start, the stop, the pause rule, and the missing-evidence treatment before collecting data. Measure prior authorizations waiting for a payer decision with the same rule for every case.",
+     "Define the start, the stop, the pause rule, and the missing-evidence treatment before collecting data. Measure prior authorizations waiting for a payer decision with the same rule for every case, and keep the clinical definition beside the count.",
      "A count needs its denominator and window before it becomes a measure. Publish the definitions with the result so a later reviewer can reproduce the number."
     ]
    },
    {
     "heading": "Evidence and limitations",
     "paragraphs": [
-     "Each case needs a dated source, the reviewer, the field that changed, and a note on anything unresolved. Keep missing, unavailable, and confirmed negative as separate states.",
+     "Each case needs a dated source, the reviewer, the field that changed, and a note on anything unresolved. Keep missing, unavailable, and confirmed negative as separate clinical states so the review does not confuse a blank with a negative.",
      "The limitation is structural: a clean record can prove that a step was documented, not that the underlying business judgement was correct."
     ]
    },
    {
     "heading": "What the team can do next",
     "paragraphs": [
-     "Use the result to fix one intake rule, one approval point, or one review cadence. Assign the change to a named owner and set a date to check whether rework fell.",
+     "Use the result to fix one intake rule, one approval point, or one review cadence. Assign the change to a named clinical owner and set a date to check whether rework fell.",
      "Clinical Care Coordinator recommends a small monthly sample rather than a one-time cleanup, because the process drifts when nobody checks the oldest open case."
     ]
    }
@@ -269,35 +269,35 @@ export const november02ResearchPosts: readonly ResearchPost[] = [
    {
     "heading": "Research question and scope",
     "paragraphs": [
-     "This study asks how care plan changes recorded after the review date behave in a defined operating window. The scope is the care plan update lag record for a clinical care team, not the legal, financial, or employment conclusion that may follow.",
+     "This study asks how care plan changes recorded after the review date behave in a defined operating window. The scope is the care plan update lag record for a clinical care team, not the legal, financial, or employment conclusion that may follow. Every count in this review stays attached to the care plan update lag case and the coordinator who accepted it.",
      "The question is narrow on purpose. Clinical Care Coordinator reports what the record can show for care organizations and clinical operations leaders and states where the evidence stops."
     ]
    },
    {
     "heading": "Population and unit of analysis",
     "paragraphs": [
-     "The population is the set of care plan update lag cases opened in one quarter. The unit is one case and one accountable owner, so linked events are not counted as independent successes.",
+     "The population is the set of care plan update lag cases opened in one quarter. The unit is one case and one accountable owner, so linked events are not counted as independent successes. This clinical sample excludes cases that cannot be tied to a patient record.",
      "Record the opening date, the source, the decision, the close date, and any reopened state. A clear unit keeps the denominator honest."
     ]
    },
    {
     "heading": "Definitions and measures",
     "paragraphs": [
-     "Define the start, the stop, the pause rule, and the missing-evidence treatment before collecting data. Measure care plan changes recorded after the review date with the same rule for every case.",
+     "Define the start, the stop, the pause rule, and the missing-evidence treatment before collecting data. Measure care plan changes recorded after the review date with the same rule for every case, and keep the clinical definition beside the count.",
      "A count needs its denominator and window before it becomes a measure. Publish the definitions with the result so a later reviewer can reproduce the number."
     ]
    },
    {
     "heading": "Evidence and limitations",
     "paragraphs": [
-     "Each case needs a dated source, the reviewer, the field that changed, and a note on anything unresolved. Keep missing, unavailable, and confirmed negative as separate states.",
+     "Each case needs a dated source, the reviewer, the field that changed, and a note on anything unresolved. Keep missing, unavailable, and confirmed negative as separate clinical states so the review does not confuse a blank with a negative.",
      "The limitation is structural: a clean record can prove that a step was documented, not that the underlying business judgement was correct."
     ]
    },
    {
     "heading": "What the team can do next",
     "paragraphs": [
-     "Use the result to fix one intake rule, one approval point, or one review cadence. Assign the change to a named owner and set a date to check whether rework fell.",
+     "Use the result to fix one intake rule, one approval point, or one review cadence. Assign the change to a named clinical owner and set a date to check whether rework fell.",
      "Clinical Care Coordinator recommends a small monthly sample rather than a one-time cleanup, because the process drifts when nobody checks the oldest open case."
     ]
    }
