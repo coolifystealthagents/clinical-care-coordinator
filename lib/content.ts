@@ -943,10 +943,10 @@ function applyEditorialPolicy<T extends { slug: string }>(
   archiveCanonical: string,
 ): T[] {
   const curatedBySlug = new Map(curated.map((record) => [record.slug, record]));
-  return records.map((record) => curatedBySlug.get(record.slug) ?? {
-    ...record,
-    indexable: false,
-    archiveCanonical,
+  return records.map((record) => {
+    const curatedRecord = curatedBySlug.get(record.slug);
+    if (curatedRecord) return { ...curatedRecord, indexable: true };
+    return { ...record, indexable: false, archiveCanonical };
   });
 }
 
