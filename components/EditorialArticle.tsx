@@ -106,7 +106,7 @@ export function EditorialArticle(props: EditorialArticleProps) {
     <section className="article-shell">
       <article className="article-prose">
         <div className="takeaway"><p className="eyebrow">Key takeaway</p><p>{props.keyTakeaway}</p></div>
-        <nav className="mobile-toc" aria-label="Article contents"><strong>In this article</strong>{toc.map((item) => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}</nav>
+        <details className="mobile-toc"><summary>In this article</summary><nav aria-label="Article contents">{toc.map((item) => <a key={item.id} href={`#${item.id}`}>{item.label}</a>)}</nav></details>
         {props.sections.map((section) => <section id={headingId(section.heading)} key={section.heading}>
           <h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </section>)}
