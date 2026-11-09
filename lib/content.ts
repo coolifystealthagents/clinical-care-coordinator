@@ -1,8 +1,10 @@
 import { site } from './site';
 import type { BlogPost, ResearchPost } from './types';
+import { november09BlogPosts } from './november09-blog';
 import { november08BlogPosts } from './november08-blog';
 import { november07BlogPosts } from './november07-blog';
 import { november06BlogPosts } from './november06-blog';
+import { november09ResearchPosts } from './november09-research';
 import { november08ResearchPosts } from './november08-research';
 import { november07ResearchPosts } from './november07-research';
 import { november06ResearchPosts } from './november06-research';
@@ -957,13 +959,13 @@ function applyEditorialPolicy<T extends { slug: string }>(
 }
 
 export const blogPosts: BlogPost[] = applyEditorialPolicy(
-  [...november08BlogPosts, ...november07BlogPosts, ...november06BlogPosts, ...november05BlogPosts, ...november02BlogPosts, ...november01BlogPosts, ...october28BlogPosts, ...october27BlogPosts, ...october26BlogPosts, ...october25BlogPosts, ...october22BlogPosts, ...october12BlogPosts, ...legacyBlogPosts],
-  [...november08BlogPosts, ...november07BlogPosts, ...november06BlogPosts, ...november05BlogPosts, ...november02BlogPosts, ...november01BlogPosts, ...october28BlogPosts, ...october27BlogPosts, ...october26BlogPosts, ...october25BlogPosts, ...october22BlogPosts, ...curatedBlogPosts],
+  [...november09BlogPosts, ...november08BlogPosts, ...november07BlogPosts, ...november06BlogPosts, ...november05BlogPosts, ...november02BlogPosts, ...november01BlogPosts, ...october28BlogPosts, ...october27BlogPosts, ...october26BlogPosts, ...october25BlogPosts, ...october22BlogPosts, ...october12BlogPosts, ...legacyBlogPosts],
+  [...november09BlogPosts, ...november08BlogPosts, ...november07BlogPosts, ...november06BlogPosts, ...november05BlogPosts, ...november02BlogPosts, ...november01BlogPosts, ...october28BlogPosts, ...october27BlogPosts, ...october26BlogPosts, ...october25BlogPosts, ...october22BlogPosts, ...curatedBlogPosts],
   blogArchiveGuide,
 );
 export const researchPosts: ResearchPost[] = applyEditorialPolicy(
-  [...november08ResearchPosts, ...november07ResearchPosts, ...november06ResearchPosts, ...november05ResearchPosts, ...november02ResearchPosts, ...november01ResearchPosts, ...october28ResearchPosts, ...october27ResearchPosts, ...october26ResearchPosts, ...october25ResearchPosts, ...october22ResearchPosts, ...october12ResearchPosts, ...legacyResearchPosts],
-  [...november08ResearchPosts, ...november07ResearchPosts, ...november06ResearchPosts, ...november05ResearchPosts, ...november02ResearchPosts, ...november01ResearchPosts, ...october28ResearchPosts, ...october27ResearchPosts, ...october26ResearchPosts, ...october25ResearchPosts, ...october22ResearchPosts, ...curatedResearchPosts],
+  [...november09ResearchPosts, ...november08ResearchPosts, ...november07ResearchPosts, ...november06ResearchPosts, ...november05ResearchPosts, ...november02ResearchPosts, ...november01ResearchPosts, ...october28ResearchPosts, ...october27ResearchPosts, ...october26ResearchPosts, ...october25ResearchPosts, ...october22ResearchPosts, ...october12ResearchPosts, ...legacyResearchPosts],
+  [...november09ResearchPosts, ...november08ResearchPosts, ...november07ResearchPosts, ...november06ResearchPosts, ...november05ResearchPosts, ...november02ResearchPosts, ...november01ResearchPosts, ...october28ResearchPosts, ...october27ResearchPosts, ...october26ResearchPosts, ...october25ResearchPosts, ...october22ResearchPosts, ...curatedResearchPosts],
   researchArchiveGuide,
 );
 
