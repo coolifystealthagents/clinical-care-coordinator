@@ -25,15 +25,17 @@ export function EditorialCollection({ kind, items }: { kind: 'blog' | 'research'
   return (
     <section className="editorial-library" aria-labelledby={`${kind}-library-title`}>
       <div className="editorial-library-heading">
-        <div>
-          <p className="eyebrow">Browse the library</p>
-          <h2 id={`${kind}-library-title`}>{kind === 'blog' ? 'Choose the workflow you need to clarify.' : 'Find a method for the operating question.'}</h2>
-          <p>{kind === 'blog' ? 'Practical summaries, scope limits, and implementation steps lead to a complete working destination.' : 'Each brief states its operational question, evidence method, protected boundary, and limits.'}</p>
-        </div>
-        <div className="topic-filters" aria-label={`Filter ${label} by topic`}>
+        <div className="editorial-filter-block">
+          <p className="eyebrow">Browse by topic</p>
+          <div className="topic-filters" aria-label={`Filter ${label} by topic`}>
           {topics.map((item) => (
             <button type="button" aria-pressed={topic === item} onClick={() => setTopic(item)} key={item}>{item.replace(' research', '')}</button>
           ))}
+          </div>
+        </div>
+        <div className="editorial-library-intro">
+          <h2 id={`${kind}-library-title`}>{kind === 'blog' ? 'Choose the workflow you need to clarify.' : 'Find a method for the operating question.'}</h2>
+          <p>{kind === 'blog' ? 'Practical summaries, scope limits, and implementation steps lead to a complete working destination.' : 'Each brief states its operational question, evidence method, protected boundary, and limits.'}</p>
         </div>
       </div>
       <p className="result-count" aria-live="polite">Showing {visible.length} {visible.length === 1 ? label.slice(0, -1) : label}{topic === 'All topics' ? '' : ` in ${topic.replace(' research', '')}`}</p>
