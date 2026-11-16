@@ -24,7 +24,7 @@ export default function BlogPage() {
   return <main id="main-content">
     <DocumentaryHero
       eyebrow="Implementation guides"
-      title="Build administrative workflows that show their boundaries."
+      title="Build care workflows with visible boundaries."
       lede="Each reviewed guide turns one recurring care operations problem into a practical role, evidence trail, exception path, and review checklist."
       image="/editorial/clinical-editorial-workflow.webp"
       alt="Two clinical staff members collaborating at a workstation"

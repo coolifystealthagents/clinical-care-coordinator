@@ -24,7 +24,7 @@ export default function ResearchPage() {
   return <main id="main-content">
     <DocumentaryHero
       eyebrow="Research library"
-      title="Measure the workflow without overstating the evidence."
+      title="Measure workflows without overstating evidence."
       lede="Source led briefs for leaders who need reproducible definitions, visible limitations, and protected decision boundaries in administrative care operations."
       image="/editorial/clinical-operations-research.webp"
       alt="Operations analyst comparing de-identified charts with a tablet"

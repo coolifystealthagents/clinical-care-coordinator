@@ -10,7 +10,7 @@ export function HomePage() {
     <main id="main-content">
       <DocumentaryHero
         eyebrow={site.eyebrow}
-        title={<>{site.hero} <em>{site.heroAccent}</em></>}
+        title={<>Give every care handoff <em>an owner and evidence.</em></>}
         lede={site.heroBody}
         image="/editorial/clinical-care-coordination-team.webp"
         alt="Two clinical team members coordinating information together at a laptop"
