@@ -19,7 +19,7 @@ export default function ServicesPage() {
   return <main id="main-content">
     <section className="service-index-hero services-photo-hero">
       <div className="services-hero-copy"><p className="eyebrow">Administrative support scopes</p><h1>Choose the queue. Then design the handoff.</h1><p>Six focused service lines help care teams add administrative continuity without transferring clinical authority. Compare the work, the evidence, and the boundary before choosing a starting point.</p><ul className="services-scope-list" aria-label="Every service scope defines"><li>Permitted work</li><li>Inspectable evidence</li><li>Protected decisions</li></ul><div className="hero-actions"><Link className="button primary" href="/contact-us">Discuss one workflow</Link><a className="quiet-link" href="#service-collection">Compare service lines</a></div></div>
-      <figure className="services-hero-media"><Image src="/editorial/services-care-coordination.webp" alt="A doctor and nurse reviewing a coordination folder together" fill priority sizes="(max-width: 950px) 90vw, 48vw"/><figcaption>Photo by <a href="https://www.pexels.com/photo/6129154/" rel="noopener noreferrer">RDNE Stock project</a> on Pexels.</figcaption></figure>
+      <figure className="services-hero-media"><Image src="/editorial/services-care-coordination.webp" alt="Two care coordinators reviewing a referral handoff at a clinic desk" fill priority sizes="(max-width: 950px) 90vw, 48vw"/></figure>
     </section>
 
     <section id="service-collection" className="section ruled-section">
