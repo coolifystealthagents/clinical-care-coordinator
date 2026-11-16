@@ -86,7 +86,7 @@ export const november16BlogPosts: BlogPost[] = [
       "label": "AHRQ: Care coordination",
       "url": "https://www.ahrq.gov/ncepcr/care/coordination.html"
     },
-    "keyTakeaway": "the care coordination supervisor keeps the decision on referral fax intake log; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The the care coordination supervisor keeps the decision on referral fax intake log. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat referral fax intake log as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses AHRQ: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -182,7 +182,7 @@ export const november16BlogPosts: BlogPost[] = [
       "label": "HRSA: Health center program",
       "url": "https://www.hrsa.gov/"
     },
-    "keyTakeaway": "the care coordinator keeps the decision on dialysis transportation checklist; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The the care coordinator keeps the decision on dialysis transportation checklist. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat dialysis transportation checklist as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses HRSA: Health center program for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -278,7 +278,7 @@ export const november16BlogPosts: BlogPost[] = [
       "label": "CMS: Care coordination",
       "url": "https://www.cms.gov/priorities/innovation/key-concepts/care-coordination"
     },
-    "keyTakeaway": "the referral coordinator keeps the decision on closed-loop referral confirmation; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The the referral coordinator keeps the decision on closed-loop referral confirmation. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat closed-loop referral confirmation as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses CMS: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -374,7 +374,7 @@ export const november16BlogPosts: BlogPost[] = [
       "label": "The Joint Commission: National Patient Safety Goals",
       "url": "https://www.jointcommission.org/standards/national-patient-safety-goals/"
     },
-    "keyTakeaway": "the transition coordinator keeps the decision on post-discharge transition packet; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The the transition coordinator keeps the decision on post-discharge transition packet. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat post-discharge transition packet as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses The Joint Commission: National Patient Safety Goals for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -470,7 +470,7 @@ export const november16BlogPosts: BlogPost[] = [
       "label": "HHS: HIPAA",
       "url": "https://www.hhs.gov/hipaa/index.html"
     },
-    "keyTakeaway": "the care coordinator keeps the decision on interpreter request log; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The the care coordinator keeps the decision on interpreter request log. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat interpreter request log as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses HHS: HIPAA for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -566,7 +566,7 @@ export const november16BlogPosts: BlogPost[] = [
       "label": "AHRQ: Quality improvement",
       "url": "https://www.ahrq.gov/ncepcr/tools/quality-improvement/index.html"
     },
-    "keyTakeaway": "the referring provider keeps the decision on specialist consult note reconciliation; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The the referring provider keeps the decision on specialist consult note reconciliation. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat specialist consult note reconciliation as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses AHRQ: Quality improvement for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -662,7 +662,7 @@ export const november16BlogPosts: BlogPost[] = [
       "label": "AHRQ: Quality improvement",
       "url": "https://www.ahrq.gov/ncepcr/tools/quality-improvement/index.html"
     },
-    "keyTakeaway": "the panel manager keeps the decision on high-risk missed-appointment outreach; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The the panel manager keeps the decision on high-risk missed-appointment outreach. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat high-risk missed-appointment outreach as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses AHRQ: Quality improvement for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -758,7 +758,7 @@ export const november16BlogPosts: BlogPost[] = [
       "label": "CMS: Care coordination",
       "url": "https://www.cms.gov/priorities/innovation/key-concepts/care-coordination"
     },
-    "keyTakeaway": "the authorization coordinator keeps the decision on prior authorization status board; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The the authorization coordinator keeps the decision on prior authorization status board. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat prior authorization status board as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses CMS: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
