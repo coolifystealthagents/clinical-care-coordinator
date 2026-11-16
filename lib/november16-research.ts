@@ -6,7 +6,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "summary": "A measurement protocol for closed-loop referrals with a dated receiving-clinic confirmation, with a frozen population, an evidence sample, and a dated review.",
     "cluster": "Referral quality",
     "publishedAt": "2026-11-16",
-    "finding": "A reproducible count of closed-loop referrals with a dated receiving-clinic confirmation records missing a required field, reported with its window and exclusions.",
+    "finding": "A reproducible count of closed-loop referrals with a dated receiving-clinic confirmation records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
     "thumbnail": "/thumbnails/november-16/how-often-do-closed-loop-referrals-carry-a-dated-receiving-clinic-confirmation.png",
     "sections": [
       {
@@ -79,6 +79,26 @@ export const november16ResearchPosts: ResearchPost[] = [
         "label": "CMS: Care coordination",
         "url": "https://www.cms.gov/priorities/innovation/key-concepts/care-coordination"
       }
+    ],
+    "keyTakeaway": "A reproducible count of closed-loop referrals with a dated receiving-clinic confirmation records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
+    "conclusion": "The closed-loop referrals with a dated receiving-clinic confirmation protocol is useful only when the population, window, and exclusions are stated beside the result. Report what the sample cannot establish before proposing a change.",
+    "sourceContext": "This protocol uses CMS: Care coordination as public context and does not claim an industry benchmark. It describes one defined population and one observation window.",
+    "methodology": "Sample closed-loop referrals with a dated receiving-clinic confirmation records from the frozen queue, record the source and observation time for each item, and report missing fields and the oldest open case with the count.",
+    "relatedArticles": [
+      {
+        "label": "What share of post-discharge follow-up calls happen inside the promised window?",
+        "href": "/research/what-share-of-post-discharge-follow-up-calls-happen-inside-the-promised-window"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What does this closed-loop referrals with a dated receiving-clinic confirmation protocol establish?",
+        "a": "A repeatable way to read the evidence for one defined population. It does not establish a universal benchmark."
+      },
+      {
+        "q": "Who owns the decision?",
+        "a": "The operations lead keeps decisions that change a patient promise, access, or policy."
+      }
     ]
   },
   {
@@ -87,7 +107,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "summary": "A measurement protocol for post-discharge follow-up calls inside the promised window, with a frozen population, an evidence sample, and a dated review.",
     "cluster": "Transition quality",
     "publishedAt": "2026-11-16",
-    "finding": "A reproducible count of post-discharge follow-up calls inside the promised window records missing a required field, reported with its window and exclusions.",
+    "finding": "A reproducible count of post-discharge follow-up calls inside the promised window records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
     "thumbnail": "/thumbnails/november-16/what-share-of-post-discharge-follow-up-calls-happen-inside-the-promised-window.png",
     "sections": [
       {
@@ -160,6 +180,26 @@ export const november16ResearchPosts: ResearchPost[] = [
         "label": "The Joint Commission: National Patient Safety Goals",
         "url": "https://www.jointcommission.org/standards/national-patient-safety-goals/"
       }
+    ],
+    "keyTakeaway": "A reproducible count of post-discharge follow-up calls inside the promised window records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
+    "conclusion": "The post-discharge follow-up calls inside the promised window protocol is useful only when the population, window, and exclusions are stated beside the result. Report what the sample cannot establish before proposing a change.",
+    "sourceContext": "This protocol uses The Joint Commission: National Patient Safety Goals as public context and does not claim an industry benchmark. It describes one defined population and one observation window.",
+    "methodology": "Sample post-discharge follow-up calls inside the promised window records from the frozen queue, record the source and observation time for each item, and report missing fields and the oldest open case with the count.",
+    "relatedArticles": [
+      {
+        "label": "How complete are interpreter requests at the time of scheduling?",
+        "href": "/research/how-complete-are-interpreter-requests-at-the-time-of-scheduling"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What does this post-discharge follow-up calls inside the promised window protocol establish?",
+        "a": "A repeatable way to read the evidence for one defined population. It does not establish a universal benchmark."
+      },
+      {
+        "q": "Who owns the decision?",
+        "a": "The operations lead keeps decisions that change a patient promise, access, or policy."
+      }
     ]
   },
   {
@@ -168,7 +208,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "summary": "A measurement protocol for interpreter requests complete at scheduling, with a frozen population, an evidence sample, and a dated review.",
     "cluster": "Language access quality",
     "publishedAt": "2026-11-16",
-    "finding": "A reproducible count of interpreter requests complete at scheduling records missing a required field, reported with its window and exclusions.",
+    "finding": "A reproducible count of interpreter requests complete at scheduling records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
     "thumbnail": "/thumbnails/november-16/how-complete-are-interpreter-requests-at-the-time-of-scheduling.png",
     "sections": [
       {
@@ -241,6 +281,26 @@ export const november16ResearchPosts: ResearchPost[] = [
         "label": "HHS: HIPAA",
         "url": "https://www.hhs.gov/hipaa/index.html"
       }
+    ],
+    "keyTakeaway": "A reproducible count of interpreter requests complete at scheduling records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
+    "conclusion": "The interpreter requests complete at scheduling protocol is useful only when the population, window, and exclusions are stated beside the result. Report what the sample cannot establish before proposing a change.",
+    "sourceContext": "This protocol uses HHS: HIPAA as public context and does not claim an industry benchmark. It describes one defined population and one observation window.",
+    "methodology": "Sample interpreter requests complete at scheduling records from the frozen queue, record the source and observation time for each item, and report missing fields and the oldest open case with the count.",
+    "relatedArticles": [
+      {
+        "label": "Do specialist consult notes answer the referral question that was sent?",
+        "href": "/research/do-specialist-consult-notes-answer-the-referral-question-that-was-sent"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What does this interpreter requests complete at scheduling protocol establish?",
+        "a": "A repeatable way to read the evidence for one defined population. It does not establish a universal benchmark."
+      },
+      {
+        "q": "Who owns the decision?",
+        "a": "The operations lead keeps decisions that change a patient promise, access, or policy."
+      }
     ]
   },
   {
@@ -249,7 +309,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "summary": "A measurement protocol for specialist consult notes answering the referral question, with a frozen population, an evidence sample, and a dated review.",
     "cluster": "Referral quality",
     "publishedAt": "2026-11-16",
-    "finding": "A reproducible count of specialist consult notes answering the referral question records missing a required field, reported with its window and exclusions.",
+    "finding": "A reproducible count of specialist consult notes answering the referral question records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
     "thumbnail": "/thumbnails/november-16/do-specialist-consult-notes-answer-the-referral-question-that-was-sent.png",
     "sections": [
       {
@@ -322,6 +382,26 @@ export const november16ResearchPosts: ResearchPost[] = [
         "label": "AHRQ: Quality improvement",
         "url": "https://www.ahrq.gov/ncepcr/tools/quality-improvement/index.html"
       }
+    ],
+    "keyTakeaway": "A reproducible count of specialist consult notes answering the referral question records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
+    "conclusion": "The specialist consult notes answering the referral question protocol is useful only when the population, window, and exclusions are stated beside the result. Report what the sample cannot establish before proposing a change.",
+    "sourceContext": "This protocol uses AHRQ: Quality improvement as public context and does not claim an industry benchmark. It describes one defined population and one observation window.",
+    "methodology": "Sample specialist consult notes answering the referral question records from the frozen queue, record the source and observation time for each item, and report missing fields and the oldest open case with the count.",
+    "relatedArticles": [
+      {
+        "label": "How old are unresolved prior authorization requests at the weekly huddle?",
+        "href": "/research/how-old-are-unresolved-prior-authorization-requests-at-the-weekly-huddle"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What does this specialist consult notes answering the referral question protocol establish?",
+        "a": "A repeatable way to read the evidence for one defined population. It does not establish a universal benchmark."
+      },
+      {
+        "q": "Who owns the decision?",
+        "a": "The operations lead keeps decisions that change a patient promise, access, or policy."
+      }
     ]
   },
   {
@@ -330,7 +410,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "summary": "A measurement protocol for unresolved prior authorization requests at the weekly huddle, with a frozen population, an evidence sample, and a dated review.",
     "cluster": "Authorization quality",
     "publishedAt": "2026-11-16",
-    "finding": "A reproducible count of unresolved prior authorization requests at the weekly huddle records missing a required field, reported with its window and exclusions.",
+    "finding": "A reproducible count of unresolved prior authorization requests at the weekly huddle records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
     "thumbnail": "/thumbnails/november-16/how-old-are-unresolved-prior-authorization-requests-at-the-weekly-huddle.png",
     "sections": [
       {
@@ -403,6 +483,26 @@ export const november16ResearchPosts: ResearchPost[] = [
         "label": "CMS: Care coordination",
         "url": "https://www.cms.gov/priorities/innovation/key-concepts/care-coordination"
       }
+    ],
+    "keyTakeaway": "A reproducible count of unresolved prior authorization requests at the weekly huddle records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
+    "conclusion": "The unresolved prior authorization requests at the weekly huddle protocol is useful only when the population, window, and exclusions are stated beside the result. Report what the sample cannot establish before proposing a change.",
+    "sourceContext": "This protocol uses CMS: Care coordination as public context and does not claim an industry benchmark. It describes one defined population and one observation window.",
+    "methodology": "Sample unresolved prior authorization requests at the weekly huddle records from the frozen queue, record the source and observation time for each item, and report missing fields and the oldest open case with the count.",
+    "relatedArticles": [
+      {
+        "label": "What proportion of missed appointments receive outreach within two business days?",
+        "href": "/research/what-proportion-of-missed-appointments-receive-outreach-within-two-business-days"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What does this unresolved prior authorization requests at the weekly huddle protocol establish?",
+        "a": "A repeatable way to read the evidence for one defined population. It does not establish a universal benchmark."
+      },
+      {
+        "q": "Who owns the decision?",
+        "a": "The operations lead keeps decisions that change a patient promise, access, or policy."
+      }
     ]
   },
   {
@@ -411,7 +511,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "summary": "A measurement protocol for missed appointments with outreach within two business days, with a frozen population, an evidence sample, and a dated review.",
     "cluster": "Panel quality",
     "publishedAt": "2026-11-16",
-    "finding": "A reproducible count of missed appointments with outreach within two business days records missing a required field, reported with its window and exclusions.",
+    "finding": "A reproducible count of missed appointments with outreach within two business days records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
     "thumbnail": "/thumbnails/november-16/what-proportion-of-missed-appointments-receive-outreach-within-two-business-days.png",
     "sections": [
       {
@@ -484,6 +584,26 @@ export const november16ResearchPosts: ResearchPost[] = [
         "label": "AHRQ: Quality improvement",
         "url": "https://www.ahrq.gov/ncepcr/tools/quality-improvement/index.html"
       }
+    ],
+    "keyTakeaway": "A reproducible count of missed appointments with outreach within two business days records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
+    "conclusion": "The missed appointments with outreach within two business days protocol is useful only when the population, window, and exclusions are stated beside the result. Report what the sample cannot establish before proposing a change.",
+    "sourceContext": "This protocol uses AHRQ: Quality improvement as public context and does not claim an industry benchmark. It describes one defined population and one observation window.",
+    "methodology": "Sample missed appointments with outreach within two business days records from the frozen queue, record the source and observation time for each item, and report missing fields and the oldest open case with the count.",
+    "relatedArticles": [
+      {
+        "label": "Can a care transition packet be rebuilt from the EHR record alone?",
+        "href": "/research/can-a-care-transition-packet-be-rebuilt-from-the-ehr-record-alone"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What does this missed appointments with outreach within two business days protocol establish?",
+        "a": "A repeatable way to read the evidence for one defined population. It does not establish a universal benchmark."
+      },
+      {
+        "q": "Who owns the decision?",
+        "a": "The operations lead keeps decisions that change a patient promise, access, or policy."
+      }
     ]
   },
   {
@@ -492,7 +612,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "summary": "A measurement protocol for care transition packets rebuilt from the EHR record, with a frozen population, an evidence sample, and a dated review.",
     "cluster": "Transition quality",
     "publishedAt": "2026-11-16",
-    "finding": "A reproducible count of care transition packets rebuilt from the EHR record records missing a required field, reported with its window and exclusions.",
+    "finding": "A reproducible count of care transition packets rebuilt from the EHR record records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
     "thumbnail": "/thumbnails/november-16/can-a-care-transition-packet-be-rebuilt-from-the-ehr-record-alone.png",
     "sections": [
       {
@@ -564,6 +684,26 @@ export const november16ResearchPosts: ResearchPost[] = [
       {
         "label": "The Joint Commission: National Patient Safety Goals",
         "url": "https://www.jointcommission.org/standards/national-patient-safety-goals/"
+      }
+    ],
+    "keyTakeaway": "A reproducible count of care transition packets rebuilt from the EHR record records can show source completeness, owner assignment, and unresolved exceptions in a frozen window.",
+    "conclusion": "The care transition packets rebuilt from the EHR record protocol is useful only when the population, window, and exclusions are stated beside the result. Report what the sample cannot establish before proposing a change.",
+    "sourceContext": "This protocol uses The Joint Commission: National Patient Safety Goals as public context and does not claim an industry benchmark. It describes one defined population and one observation window.",
+    "methodology": "Sample care transition packets rebuilt from the EHR record records from the frozen queue, record the source and observation time for each item, and report missing fields and the oldest open case with the count.",
+    "relatedArticles": [
+      {
+        "label": "How often do closed-loop referrals carry a dated receiving-clinic confirmation?",
+        "href": "/research/how-often-do-closed-loop-referrals-carry-a-dated-receiving-clinic-confirmation"
+      }
+    ],
+    "faq": [
+      {
+        "q": "What does this care transition packets rebuilt from the EHR record protocol establish?",
+        "a": "A repeatable way to read the evidence for one defined population. It does not establish a universal benchmark."
+      },
+      {
+        "q": "Who owns the decision?",
+        "a": "The operations lead keeps decisions that change a patient promise, access, or policy."
       }
     ]
   }

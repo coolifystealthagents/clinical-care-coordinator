@@ -74,6 +74,10 @@ export const november16BlogPosts: BlogPost[] = [
       {
         "q": "What closes a referral fax intake log case?",
         "a": "A named owner, the source record, the decision, and the confirmed destination value."
+      },
+      {
+        "q": "What closes a referral fax intake log case?",
+        "a": "A named owner, the source record, the dated decision, and the confirmed destination value."
       }
     ],
     "internalService": "/services/referral-coordination",
@@ -81,7 +85,16 @@ export const november16BlogPosts: BlogPost[] = [
     "source": {
       "label": "AHRQ: Care coordination",
       "url": "https://www.ahrq.gov/ncepcr/care/coordination.html"
-    }
+    },
+    "keyTakeaway": "the care coordination supervisor keeps the decision on referral fax intake log; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "conclusion": "Treat referral fax intake log as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
+    "sourceContext": "This note uses AHRQ: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
+    "relatedArticles": [
+      {
+        "label": "Build a patient transportation checklist for recurring dialysis visits",
+        "href": "/blog/build-a-patient-transportation-checklist-for-recurring-dialysis-visits"
+      }
+    ]
   },
   {
     "slug": "build-a-patient-transportation-checklist-for-recurring-dialysis-visits",
@@ -157,6 +170,10 @@ export const november16BlogPosts: BlogPost[] = [
       {
         "q": "What closes a dialysis transportation checklist case?",
         "a": "A named owner, the source record, the decision, and the confirmed destination value."
+      },
+      {
+        "q": "What closes a dialysis transportation checklist case?",
+        "a": "A named owner, the source record, the dated decision, and the confirmed destination value."
       }
     ],
     "internalService": "/services/patient-access-support",
@@ -164,7 +181,16 @@ export const november16BlogPosts: BlogPost[] = [
     "source": {
       "label": "HRSA: Health center program",
       "url": "https://www.hrsa.gov/"
-    }
+    },
+    "keyTakeaway": "the care coordinator keeps the decision on dialysis transportation checklist; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "conclusion": "Treat dialysis transportation checklist as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
+    "sourceContext": "This note uses HRSA: Health center program for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
+    "relatedArticles": [
+      {
+        "label": "Track a closed-loop referral confirmation without closing the case early",
+        "href": "/blog/track-a-closed-loop-referral-confirmation-without-closing-the-case-early"
+      }
+    ]
   },
   {
     "slug": "track-a-closed-loop-referral-confirmation-without-closing-the-case-early",
@@ -240,6 +266,10 @@ export const november16BlogPosts: BlogPost[] = [
       {
         "q": "What closes a closed-loop referral confirmation case?",
         "a": "A named owner, the source record, the decision, and the confirmed destination value."
+      },
+      {
+        "q": "What closes a closed-loop referral confirmation case?",
+        "a": "A named owner, the source record, the dated decision, and the confirmed destination value."
       }
     ],
     "internalService": "/services/referral-coordination",
@@ -247,7 +277,16 @@ export const november16BlogPosts: BlogPost[] = [
     "source": {
       "label": "CMS: Care coordination",
       "url": "https://www.cms.gov/priorities/innovation/key-concepts/care-coordination"
-    }
+    },
+    "keyTakeaway": "the referral coordinator keeps the decision on closed-loop referral confirmation; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "conclusion": "Treat closed-loop referral confirmation as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
+    "sourceContext": "This note uses CMS: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
+    "relatedArticles": [
+      {
+        "label": "Prepare a care transition packet for a post-discharge follow-up call",
+        "href": "/blog/prepare-a-care-transition-packet-for-a-post-discharge-follow-up-call"
+      }
+    ]
   },
   {
     "slug": "prepare-a-care-transition-packet-for-a-post-discharge-follow-up-call",
@@ -323,6 +362,10 @@ export const november16BlogPosts: BlogPost[] = [
       {
         "q": "What closes a post-discharge transition packet case?",
         "a": "A named owner, the source record, the decision, and the confirmed destination value."
+      },
+      {
+        "q": "What closes a post-discharge transition packet case?",
+        "a": "A named owner, the source record, the dated decision, and the confirmed destination value."
       }
     ],
     "internalService": "/services/care-transition-support",
@@ -330,7 +373,16 @@ export const november16BlogPosts: BlogPost[] = [
     "source": {
       "label": "The Joint Commission: National Patient Safety Goals",
       "url": "https://www.jointcommission.org/standards/national-patient-safety-goals/"
-    }
+    },
+    "keyTakeaway": "the transition coordinator keeps the decision on post-discharge transition packet; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "conclusion": "Treat post-discharge transition packet as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
+    "sourceContext": "This note uses The Joint Commission: National Patient Safety Goals for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
+    "relatedArticles": [
+      {
+        "label": "Keep an interpreter request log tied to the scheduled visit",
+        "href": "/blog/keep-an-interpreter-request-log-tied-to-the-scheduled-visit"
+      }
+    ]
   },
   {
     "slug": "keep-an-interpreter-request-log-tied-to-the-scheduled-visit",
@@ -406,6 +458,10 @@ export const november16BlogPosts: BlogPost[] = [
       {
         "q": "What closes a interpreter request log case?",
         "a": "A named owner, the source record, the decision, and the confirmed destination value."
+      },
+      {
+        "q": "What closes a interpreter request log case?",
+        "a": "A named owner, the source record, the dated decision, and the confirmed destination value."
       }
     ],
     "internalService": "/services/patient-access-support",
@@ -413,7 +469,16 @@ export const november16BlogPosts: BlogPost[] = [
     "source": {
       "label": "HHS: HIPAA",
       "url": "https://www.hhs.gov/hipaa/index.html"
-    }
+    },
+    "keyTakeaway": "the care coordinator keeps the decision on interpreter request log; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "conclusion": "Treat interpreter request log as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
+    "sourceContext": "This note uses HHS: HIPAA for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
+    "relatedArticles": [
+      {
+        "label": "Reconcile a specialist consult note against the referral question",
+        "href": "/blog/reconcile-a-specialist-consult-note-against-the-referral-question"
+      }
+    ]
   },
   {
     "slug": "reconcile-a-specialist-consult-note-against-the-referral-question",
@@ -489,6 +554,10 @@ export const november16BlogPosts: BlogPost[] = [
       {
         "q": "What closes a specialist consult note reconciliation case?",
         "a": "A named owner, the source record, the decision, and the confirmed destination value."
+      },
+      {
+        "q": "What closes a specialist consult note reconciliation case?",
+        "a": "A named owner, the source record, the dated decision, and the confirmed destination value."
       }
     ],
     "internalService": "/services/referral-coordination",
@@ -496,7 +565,16 @@ export const november16BlogPosts: BlogPost[] = [
     "source": {
       "label": "AHRQ: Quality improvement",
       "url": "https://www.ahrq.gov/ncepcr/tools/quality-improvement/index.html"
-    }
+    },
+    "keyTakeaway": "the referring provider keeps the decision on specialist consult note reconciliation; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "conclusion": "Treat specialist consult note reconciliation as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
+    "sourceContext": "This note uses AHRQ: Quality improvement for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
+    "relatedArticles": [
+      {
+        "label": "Set a missed-appointment outreach sequence for a high-risk panel",
+        "href": "/blog/set-a-missed-appointment-outreach-sequence-for-a-high-risk-panel"
+      }
+    ]
   },
   {
     "slug": "set-a-missed-appointment-outreach-sequence-for-a-high-risk-panel",
@@ -572,6 +650,10 @@ export const november16BlogPosts: BlogPost[] = [
       {
         "q": "What closes a high-risk missed-appointment outreach case?",
         "a": "A named owner, the source record, the decision, and the confirmed destination value."
+      },
+      {
+        "q": "What closes a high-risk missed-appointment outreach case?",
+        "a": "A named owner, the source record, the dated decision, and the confirmed destination value."
       }
     ],
     "internalService": "/services/panel-coordination",
@@ -579,7 +661,16 @@ export const november16BlogPosts: BlogPost[] = [
     "source": {
       "label": "AHRQ: Quality improvement",
       "url": "https://www.ahrq.gov/ncepcr/tools/quality-improvement/index.html"
-    }
+    },
+    "keyTakeaway": "the panel manager keeps the decision on high-risk missed-appointment outreach; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "conclusion": "Treat high-risk missed-appointment outreach as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
+    "sourceContext": "This note uses AHRQ: Quality improvement for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
+    "relatedArticles": [
+      {
+        "label": "Audit a prior authorization status board before the weekly huddle",
+        "href": "/blog/audit-a-prior-authorization-status-board-before-the-weekly-huddle"
+      }
+    ]
   },
   {
     "slug": "audit-a-prior-authorization-status-board-before-the-weekly-huddle",
@@ -655,6 +746,10 @@ export const november16BlogPosts: BlogPost[] = [
       {
         "q": "What closes a prior authorization status board case?",
         "a": "A named owner, the source record, the decision, and the confirmed destination value."
+      },
+      {
+        "q": "What closes a prior authorization status board case?",
+        "a": "A named owner, the source record, the dated decision, and the confirmed destination value."
       }
     ],
     "internalService": "/services/authorization-support",
@@ -662,6 +757,15 @@ export const november16BlogPosts: BlogPost[] = [
     "source": {
       "label": "CMS: Care coordination",
       "url": "https://www.cms.gov/priorities/innovation/key-concepts/care-coordination"
-    }
+    },
+    "keyTakeaway": "the authorization coordinator keeps the decision on prior authorization status board; the assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "conclusion": "Treat prior authorization status board as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
+    "sourceContext": "This note uses CMS: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
+    "relatedArticles": [
+      {
+        "label": "Standardize a referral fax intake log for a multi-site clinic",
+        "href": "/blog/standardize-a-referral-fax-intake-log-for-a-multi-site-clinic"
+      }
+    ]
   }
 ];
