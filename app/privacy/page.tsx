@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { WorkflowArt } from '@/components/Visuals';
 
 export const metadata: Metadata = {
   title: 'Privacy policy',
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return <main id="main-content">
-    <section className="legal-hero legal-privacy"><div><p className="eyebrow">Privacy policy</p><h1>Plain information about website data.</h1><p>Last updated October 20, 2026</p></div><WorkflowArt variant="records" title="A record path from collection to appropriate use"/></section>
+    <section className="legal-hero legal-privacy"><div><p className="eyebrow">Privacy policy</p><h1>Plain information about website data.</h1><p>Last updated October 20, 2026</p></div><aside className="scope-note"><p className="eyebrow">At a glance</p><p><strong>Use the inquiry form only for business contact and workflow context.</strong></p><p>Do not submit patient or protected health information through this public website.</p></aside></section>
     <section className="section legal-layout"><aside><p className="eyebrow">On this page</p><nav aria-label="Privacy policy sections"><a href="#collection">Information collected</a><a href="#use">How it is used</a><a href="#sharing">Services and sharing</a><a href="#choices">Your choices</a><a href="#security">Security and retention</a><a href="#contact">Contact</a></nav></aside><article className="legal-copy">
       <p>This policy describes information handled through this public website. It does not describe a customer organization&apos;s clinical systems or establish this website as a channel for patient care.</p>
       <h2 id="collection">Information collected</h2><p>When you submit the contact form, the site validates the fields you provide. Contact and organization fields are then sent through the site&apos;s analytics and lead attribution service. The optional workflow description is validated transiently but excluded from browser analytics and is not currently delivered to an external inquiry inbox.</p><p>Do not submit patient names, diagnoses, appointment details, medical record contents, or other protected health information. This public form is intended for business inquiries, and you should not rely on it to transmit operational detail.</p><p>The site loads an analytics and lead attribution script. Basic events may include page visits, referral information, campaign parameters, browser or device information, approximate network information, and form conversion events. Server logs may also record request time, path, network address, and user agent for operation and security.</p>

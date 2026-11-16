@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { WorkflowArt } from '@/components/Visuals';
 
 export const metadata: Metadata = {
   title: 'Website terms of use',
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return <main id="main-content">
-    <section className="legal-hero legal-terms"><div><p className="eyebrow">Website terms</p><h1>Terms for this public information site.</h1><p>Last updated October 20, 2026</p></div><WorkflowArt variant="message" title="Clear boundaries for information, inquiries, and next steps"/></section>
+    <section className="legal-hero legal-terms"><div><p className="eyebrow">Website terms</p><h1>Terms for this public information site.</h1><p>Last updated October 20, 2026</p></div><aside className="scope-note"><p className="eyebrow">Site boundary</p><p><strong>Public information is not clinical, legal, or compliance advice.</strong></p><p>Service scope, availability, terms, and next steps require separate agreement.</p></aside></section>
     <section className="section legal-layout"><aside><p className="eyebrow">On this page</p><nav aria-label="Terms sections"><a href="#scope">Scope</a><a href="#not-care">Not medical care</a><a href="#inquiries">Inquiries</a><a href="#acceptable">Acceptable use</a><a href="#content">Content and links</a><a href="#disclaimers">Disclaimers</a><a href="#contact">Questions</a></nav></aside><article className="legal-copy">
       <p>These terms apply to use of the Clinical Care Coordinator public website. By using the site, you agree to use it lawfully and consistently with these terms. If you do not agree, do not use the site.</p>
       <h2 id="scope">Website and service scope</h2><p>The site provides general information about remote administrative staffing and workflow design for care organizations. Descriptions are examples of possible role boundaries, not a promise that a particular person, scope, schedule, result, or service is available.</p><p>Any staffing relationship, fees, responsibilities, privacy terms, service level, or deliverable would require separate review and agreement. Website content alone does not create a customer, employment, agency, fiduciary, professional, or clinical relationship.</p>

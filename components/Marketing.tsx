@@ -2,24 +2,27 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { indexableBlogPosts } from '@/lib/content';
 import { site } from '@/lib/site';
-import { ReviewLane, TopicVisual, WorkflowArt } from './Visuals';
+import { DocumentaryHero } from './Editorial';
+import { ReviewLane, TopicVisual } from './Visuals';
 
 export function HomePage() {
   return (
     <main id="main-content">
-      <section className="home-hero">
-        <div className="hero-copy">
-          <p className="eyebrow">{site.eyebrow}</p>
-          <h1>{site.hero} <em>{site.heroAccent}</em></h1>
-          <p className="hero-body">{site.heroBody}</p>
+      <DocumentaryHero
+        eyebrow={site.eyebrow}
+        title={<>{site.hero} <em>{site.heroAccent}</em></>}
+        lede={site.heroBody}
+        image="/editorial/clinical-care-coordination-team.webp"
+        alt="Two clinical team members coordinating information together at a laptop"
+        credit="Pexels contributor"
+        source="https://www.pexels.com/photo/5327649/"
+      >
           <div className="hero-actions">
             <Link id="cta-home-hero-contact" className="button primary" href="/contact-us">Start a workflow conversation</Link>
             <Link className="quiet-link" href="/services">Review support scopes</Link>
           </div>
           <ul className="principle-list">{site.principles.map((item) => <li key={item}>{item}</li>)}</ul>
-        </div>
-        <WorkflowArt title="A visible path from intake to closure" />
-      </section>
+      </DocumentaryHero>
 
       <section className="status-strip" aria-label="Coordination operating model">
         <span>Owner named</span><span>Evidence attached</span><span>Next action visible</span><span>Boundary protected</span>
@@ -43,7 +46,11 @@ export function HomePage() {
       </section>
 
       <section className="section handoff-section">
-        <WorkflowArt variant="referral" title="A handoff that can be checked" />
+        <ol className="handoff-checkpoints" aria-label="A handoff that can be checked">
+          <li><span>01</span><strong>Confirm the source</strong><small>Keep the original request and current rule visible.</small></li>
+          <li><span>02</span><strong>Name the next owner</strong><small>Transfer context without transferring clinical judgment.</small></li>
+          <li><span>03</span><strong>Record acknowledgment</strong><small>Close only when the approved evidence is present.</small></li>
+        </ol>
         <div><p className="eyebrow">A controlled launch</p><h2>Start narrow. Learn from the record.</h2><p>Select one recurring queue. Define accepted inputs, completion evidence, the licensed boundary, and named escalation owners. Review a small sample before the scope grows.</p><dl className="ledger-list"><div><dt>Owner</dt><dd>Who accepts the next action</dd></div><div><dt>Evidence</dt><dd>What supports the current status</dd></div><div><dt>Exception</dt><dd>When work pauses and transfers</dd></div></dl><Link className="button primary" href="/contact-us">Map the first workflow</Link></div>
       </section>
 

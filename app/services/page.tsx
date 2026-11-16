@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { WorkflowArt } from '@/components/Visuals';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -19,7 +18,7 @@ export default function ServicesPage() {
   return <main id="main-content">
     <section className="service-index-hero">
       <div><p className="eyebrow">Administrative support scopes</p><h1>Choose the queue. Then design the handoff.</h1><p>Six focused service lines help care teams add administrative continuity without transferring clinical authority. Compare the work, the evidence, and the boundary before choosing a starting point.</p><div className="hero-actions"><Link className="button primary" href="/contact-us">Discuss one workflow</Link><a className="quiet-link" href="#service-collection">Compare service lines</a></div></div>
-      <WorkflowArt variant="home" title="A service model built around visible ownership" />
+      <aside className="scope-note"><p className="eyebrow">Every scope defines</p><ul><li>Permitted administrative work</li><li>Inspectable output evidence</li><li>Protected decisions and escalation owners</li></ul></aside>
     </section>
 
     <section id="service-collection" className="section ruled-section">

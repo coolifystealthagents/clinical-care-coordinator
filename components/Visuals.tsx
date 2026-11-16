@@ -1,36 +1,6 @@
 import Image from 'next/image';
 import reviews from '@/app/data/review-provenance.json';
 
-const labels: Record<string, string[]> = {
-  calendar: ['Request', 'Rules checked', 'Time held', 'Confirm'],
-  referral: ['Received', 'Documents', 'Destination', 'Acknowledge'],
-  outreach: ['Eligible queue', 'Approved script', 'Response', 'Route'],
-  records: ['Authorize', 'Request', 'Reconcile', 'Close'],
-  message: ['Original note', 'Classify', 'Transfer', 'Acknowledge'],
-  team: ['Agenda', 'Decision', 'Owner', 'Action'],
-  home: ['Intake', 'Prepare', 'Verify', 'Handoff', 'Escalate', 'Close'],
-};
-
-export function WorkflowArt({ variant = 'home', title }: { variant?: string; title: string }) {
-  const items = labels[variant] || labels.home;
-  return (
-    <figure className={`workflow-art art-${variant}`} aria-label={title}>
-      <figcaption>{title}</figcaption>
-      <div className="ledger-head"><span>Status ledger</span><span>Owner and evidence</span></div>
-      <div className="workflow-line" aria-hidden="true">
-        {items.map((item, index) => (
-          <div className="workflow-node" key={item}>
-            <span className="node-dot" />
-            <strong>{item}</strong>
-            <small>{index === items.length - 2 ? 'Licensed review when needed' : 'Recorded next action'}</small>
-          </div>
-        ))}
-      </div>
-      <div className="ledger-note"><span>Boundary</span><strong>Administrative preparation never replaces clinical judgment.</strong></div>
-    </figure>
-  );
-}
-
 export function TopicVisual({ title, src }: { title: string; src?: string }) {
   if (src) return <Image className="topic-image" src={src} alt={`Editorial illustration for ${title}`} width={1200} height={630} />;
   return (

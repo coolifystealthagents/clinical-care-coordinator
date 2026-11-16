@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { WorkflowArt } from '@/components/Visuals';
 import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return <main id="main-content">
-    <section className="about-hero"><div><p className="eyebrow">About {site.name}</p><h1>Staff the coordination. Keep authority where it belongs.</h1><p>We help care organizations define focused remote administrative roles around real queues, named owners, reviewable outputs, and explicit escalation.</p><div className="hero-actions"><Link className="button primary" href="/contact-us">Discuss a role</Link><Link className="quiet-link" href="/services">Explore service scopes</Link></div></div><WorkflowArt variant="team" title="Role design from approved input to accountable handoff"/></section>
+    <section className="about-hero"><div><p className="eyebrow">About {site.name}</p><h1>Staff the coordination. Keep authority where it belongs.</h1><p>We help care organizations define focused remote administrative roles around real queues, named owners, reviewable outputs, and explicit escalation.</p><div className="hero-actions"><Link className="button primary" href="/contact-us">Discuss a role</Link><Link className="quiet-link" href="/services">Explore service scopes</Link></div></div><aside className="scope-note"><p className="eyebrow">Role design</p><p><strong>Approved inputs. Named owners. Reviewable outputs.</strong></p><p>Every exception returns to the accountable person your organization identifies.</p></aside></section>
 
     <section className="section split-intro"><div><p className="eyebrow">The staffing relationship</p><h2>A person supports your process inside your controls.</h2></div><div><p>Clinical Care Coordinator is a specialist staffing site powered by Stealth Agents. The service helps define an administrative role and connect your organization with remote support whose strengths fit that role.</p><p>The coordinator works within procedures, systems, access, and supervision your organization approves. Your organization directs the work and remains responsible for privacy, security, professional oversight, and regulated decisions.</p></div></section>
 

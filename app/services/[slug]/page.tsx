@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { WorkflowArt } from '@/components/Visuals';
 import { site } from '@/lib/site';
 import { serviceBySlug } from '@/lib/content';
 
@@ -43,7 +42,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   return <main id="main-content">
     <section className={`service-hero service-hero-${service.theme}`}>
       <div className="hero-copy"><nav className="breadcrumbs" aria-label="Breadcrumb"><Link href="/">Home</Link><span aria-hidden="true">/</span><Link href="/services">Services</Link><span aria-hidden="true">/</span><span>{service.name}</span></nav><p className="eyebrow">Focused administrative role</p><h1>{service.name}</h1><p className="hero-body">{service.scope}</p><div className="hero-actions"><Link className="button primary" href="/contact-us">Discuss this workflow</Link><a className="quiet-link" href="#scope">Inspect the scope</a></div></div>
-      <WorkflowArt variant={service.theme} title={`${service.name} handoff map`} />
+      <aside className="scope-note"><p className="eyebrow">Role boundary</p><p><strong>Administrative preparation supports the path.</strong></p><p>{service.licensed[0]}, {service.licensed[1].toLowerCase()}, and other protected decisions stay with licensed or authorized staff.</p></aside>
     </section>
 
     <section id="scope" className="section service-intro"><div><p className="eyebrow">Role brief</p><h2>One queue, explicit authority, visible evidence.</h2></div><p>{service.short} The role works from your approved procedure and records what happened, what supports the status, and who owns the next action. Scope changes return to your accountable manager for approval.</p></section>
