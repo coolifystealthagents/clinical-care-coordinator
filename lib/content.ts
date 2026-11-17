@@ -3,6 +3,7 @@ import type { BlogPost, ResearchPost } from './types';
 import { november11BlogPosts } from './november11-blog';
 import { november10BlogPosts } from './november10-blog';
 import { november09BlogPosts } from './november09-blog';
+import { november17BlogPosts } from './november17-blog';
 import { november16BlogPosts } from './november16-blog';
 import { november08BlogPosts } from './november08-blog';
 import { november07BlogPosts } from './november07-blog';
@@ -10,6 +11,7 @@ import { november06BlogPosts } from './november06-blog';
 import { november11ResearchPosts } from './november11-research';
 import { november10ResearchPosts } from './november10-research';
 import { november09ResearchPosts } from './november09-research';
+import { november17ResearchPosts } from './november17-research';
 import { november16ResearchPosts } from './november16-research';
 import { november08ResearchPosts } from './november08-research';
 import { november07ResearchPosts } from './november07-research';
@@ -965,13 +967,13 @@ function applyEditorialPolicy<T extends { slug: string }>(
 }
 
 export const blogPosts: BlogPost[] = applyEditorialPolicy(
-  [...november11BlogPosts, ...november10BlogPosts, ...november09BlogPosts, ...november16BlogPosts, ...november08BlogPosts, ...november07BlogPosts, ...november06BlogPosts, ...november05BlogPosts, ...november02BlogPosts, ...november01BlogPosts, ...october28BlogPosts, ...october27BlogPosts, ...october26BlogPosts, ...october25BlogPosts, ...october22BlogPosts, ...october12BlogPosts, ...legacyBlogPosts],
-  [...november16BlogPosts, ...november11BlogPosts, ...november10BlogPosts, ...november09BlogPosts, ...november08BlogPosts, ...november07BlogPosts, ...november06BlogPosts, ...november05BlogPosts, ...november02BlogPosts, ...november01BlogPosts, ...october28BlogPosts, ...october27BlogPosts, ...october26BlogPosts, ...october25BlogPosts, ...october22BlogPosts, ...curatedBlogPosts],
+  [...november11BlogPosts, ...november10BlogPosts, ...november09BlogPosts, ...november17BlogPosts, ...november16BlogPosts, ...november08BlogPosts, ...november07BlogPosts, ...november06BlogPosts, ...november05BlogPosts, ...november02BlogPosts, ...november01BlogPosts, ...october28BlogPosts, ...october27BlogPosts, ...october26BlogPosts, ...october25BlogPosts, ...october22BlogPosts, ...october12BlogPosts, ...legacyBlogPosts],
+  [...november17BlogPosts, ...november16BlogPosts, ...november11BlogPosts, ...november10BlogPosts, ...november09BlogPosts, ...november08BlogPosts, ...november07BlogPosts, ...november06BlogPosts, ...november05BlogPosts, ...november02BlogPosts, ...november01BlogPosts, ...october28BlogPosts, ...october27BlogPosts, ...october26BlogPosts, ...october25BlogPosts, ...october22BlogPosts, ...curatedBlogPosts],
   blogArchiveGuide,
 );
 export const researchPosts: ResearchPost[] = applyEditorialPolicy(
-  [...november11ResearchPosts, ...november10ResearchPosts, ...november09ResearchPosts, ...november16ResearchPosts, ...november08ResearchPosts, ...november07ResearchPosts, ...november06ResearchPosts, ...november05ResearchPosts, ...november02ResearchPosts, ...november01ResearchPosts, ...october28ResearchPosts, ...october27ResearchPosts, ...october26ResearchPosts, ...october25ResearchPosts, ...october22ResearchPosts, ...october12ResearchPosts, ...legacyResearchPosts],
-  [...november16ResearchPosts, ...november11ResearchPosts, ...november10ResearchPosts, ...november09ResearchPosts, ...november08ResearchPosts, ...november07ResearchPosts, ...november06ResearchPosts, ...november05ResearchPosts, ...november02ResearchPosts, ...november01ResearchPosts, ...october28ResearchPosts, ...october27ResearchPosts, ...october26ResearchPosts, ...october25ResearchPosts, ...october22ResearchPosts, ...curatedResearchPosts],
+  [...november11ResearchPosts, ...november10ResearchPosts, ...november09ResearchPosts, ...november17ResearchPosts, ...november16ResearchPosts, ...november08ResearchPosts, ...november07ResearchPosts, ...november06ResearchPosts, ...november05ResearchPosts, ...november02ResearchPosts, ...november01ResearchPosts, ...october28ResearchPosts, ...october27ResearchPosts, ...october26ResearchPosts, ...october25ResearchPosts, ...october22ResearchPosts, ...october12ResearchPosts, ...legacyResearchPosts],
+  [...november17ResearchPosts, ...november16ResearchPosts, ...november11ResearchPosts, ...november10ResearchPosts, ...november09ResearchPosts, ...november08ResearchPosts, ...november07ResearchPosts, ...november06ResearchPosts, ...november05ResearchPosts, ...november02ResearchPosts, ...november01ResearchPosts, ...october28ResearchPosts, ...october27ResearchPosts, ...october26ResearchPosts, ...october25ResearchPosts, ...october22ResearchPosts, ...curatedResearchPosts],
   researchArchiveGuide,
 );
 
