@@ -69,7 +69,7 @@ export const november17BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a rural clinic referral status huddle exception?",
-        "a": "The the care coordination supervisor approves; the assistant prepares the evidence."
+        "a": "The care coordination supervisor approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a rural clinic referral status huddle case?",
@@ -86,7 +86,7 @@ export const november17BlogPosts: BlogPost[] = [
       "label": "AHRQ: Care coordination",
       "url": "https://www.ahrq.gov/ncepcr/care/coordination.html"
     },
-    "keyTakeaway": "The the care coordination supervisor keeps the decision on rural clinic referral status huddle. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The care coordination supervisor keeps the decision on rural clinic referral status huddle. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat rural clinic referral status huddle as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses AHRQ: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -165,7 +165,7 @@ export const november17BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a durable medical equipment order exception?",
-        "a": "The the care coordinator approves; the assistant prepares the evidence."
+        "a": "The care coordinator approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a durable medical equipment order case?",
@@ -182,7 +182,7 @@ export const november17BlogPosts: BlogPost[] = [
       "label": "HRSA: Health center program",
       "url": "https://www.hrsa.gov/"
     },
-    "keyTakeaway": "The the care coordinator keeps the decision on durable medical equipment order. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The care coordinator keeps the decision on durable medical equipment order. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat durable medical equipment order as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses HRSA: Health center program for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -261,7 +261,7 @@ export const november17BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a overdue lab care gap outreach exception?",
-        "a": "The the panel manager approves; the assistant prepares the evidence."
+        "a": "The panel manager approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a overdue lab care gap outreach case?",
@@ -278,7 +278,7 @@ export const november17BlogPosts: BlogPost[] = [
       "label": "AHRQ: Quality improvement",
       "url": "https://www.ahrq.gov/ncepcr/tools/quality-improvement/index.html"
     },
-    "keyTakeaway": "The the panel manager keeps the decision on overdue lab care gap outreach. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The panel manager keeps the decision on overdue lab care gap outreach. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat overdue lab care gap outreach as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses AHRQ: Quality improvement for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -357,7 +357,7 @@ export const november17BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a cross-county specialist wait-time log exception?",
-        "a": "The the referral coordinator approves; the assistant prepares the evidence."
+        "a": "The referral coordinator approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a cross-county specialist wait-time log case?",
@@ -374,7 +374,7 @@ export const november17BlogPosts: BlogPost[] = [
       "label": "CMS: Care coordination",
       "url": "https://www.cms.gov/priorities/innovation/key-concepts/care-coordination"
     },
-    "keyTakeaway": "The the referral coordinator keeps the decision on cross-county specialist wait-time log. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The referral coordinator keeps the decision on cross-county specialist wait-time log. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat cross-county specialist wait-time log as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses CMS: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -453,7 +453,7 @@ export const november17BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a patient portal message queue exception?",
-        "a": "The the care coordinator approves; the assistant prepares the evidence."
+        "a": "The care coordinator approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a patient portal message queue case?",
@@ -470,7 +470,7 @@ export const november17BlogPosts: BlogPost[] = [
       "label": "HHS: HIPAA",
       "url": "https://www.hhs.gov/hipaa/index.html"
     },
-    "keyTakeaway": "The the care coordinator keeps the decision on patient portal message queue. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The care coordinator keeps the decision on patient portal message queue. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat patient portal message queue as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses HHS: HIPAA for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -549,7 +549,7 @@ export const november17BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a home health wound care referral packet exception?",
-        "a": "The the transition coordinator approves; the assistant prepares the evidence."
+        "a": "The transition coordinator approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a home health wound care referral packet case?",
@@ -566,7 +566,7 @@ export const november17BlogPosts: BlogPost[] = [
       "label": "The Joint Commission: National Patient Safety Goals",
       "url": "https://www.jointcommission.org/standards/national-patient-safety-goals/"
     },
-    "keyTakeaway": "The the transition coordinator keeps the decision on home health wound care referral packet. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The transition coordinator keeps the decision on home health wound care referral packet. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat home health wound care referral packet as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses The Joint Commission: National Patient Safety Goals for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -645,7 +645,7 @@ export const november17BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a community health worker visit note exception?",
-        "a": "The the care plan manager approves; the assistant prepares the evidence."
+        "a": "The care plan manager approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a community health worker visit note case?",
@@ -662,7 +662,7 @@ export const november17BlogPosts: BlogPost[] = [
       "label": "AHRQ: Quality improvement",
       "url": "https://www.ahrq.gov/ncepcr/tools/quality-improvement/index.html"
     },
-    "keyTakeaway": "The the care plan manager keeps the decision on community health worker visit note. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The care plan manager keeps the decision on community health worker visit note. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat community health worker visit note as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses AHRQ: Quality improvement for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -741,7 +741,7 @@ export const november17BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a medication refill request exception?",
-        "a": "The the care coordinator approves; the assistant prepares the evidence."
+        "a": "The care coordinator approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a medication refill request case?",
@@ -758,7 +758,7 @@ export const november17BlogPosts: BlogPost[] = [
       "label": "HHS: HIPAA",
       "url": "https://www.hhs.gov/hipaa/index.html"
     },
-    "keyTakeaway": "The the care coordinator keeps the decision on medication refill request. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The care coordinator keeps the decision on medication refill request. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat medication refill request as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses HHS: HIPAA for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
