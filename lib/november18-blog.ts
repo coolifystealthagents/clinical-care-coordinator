@@ -69,7 +69,7 @@ export const november18BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a behavioral health referral confirmation exception?",
-        "a": "The the care coordination supervisor approves; the assistant prepares the evidence."
+        "a": "The care coordination supervisor approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a behavioral health referral confirmation case?",
@@ -86,7 +86,7 @@ export const november18BlogPosts: BlogPost[] = [
       "label": "AHRQ: Care coordination",
       "url": "https://www.ahrq.gov/ncepcr/care/coordination.html"
     },
-    "keyTakeaway": "The the care coordination supervisor keeps the decision on behavioral health referral confirmation. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The care coordination supervisor keeps the decision on behavioral health referral confirmation. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat behavioral health referral confirmation as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses AHRQ: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -165,7 +165,7 @@ export const november18BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a prior authorization renewal exception?",
-        "a": "The the utilization coordinator approves; the assistant prepares the evidence."
+        "a": "The utilization coordinator approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a prior authorization renewal case?",
@@ -182,7 +182,7 @@ export const november18BlogPosts: BlogPost[] = [
       "label": "CMS: Care coordination",
       "url": "https://www.cms.gov/priorities/innovation/key-concepts/care-coordination"
     },
-    "keyTakeaway": "The the utilization coordinator keeps the decision on prior authorization renewal. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The utilization coordinator keeps the decision on prior authorization renewal. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat prior authorization renewal as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses CMS: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -261,7 +261,7 @@ export const november18BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a missed-appointment rebooking queue exception?",
-        "a": "The the access coordinator approves; the assistant prepares the evidence."
+        "a": "The access coordinator approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a missed-appointment rebooking queue case?",
@@ -278,7 +278,7 @@ export const november18BlogPosts: BlogPost[] = [
       "label": "HRSA: Health center program",
       "url": "https://www.hrsa.gov/"
     },
-    "keyTakeaway": "The the access coordinator keeps the decision on missed-appointment rebooking queue. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The access coordinator keeps the decision on missed-appointment rebooking queue. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat missed-appointment rebooking queue as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses HRSA: Health center program for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -357,7 +357,7 @@ export const november18BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a interpreter request exception?",
-        "a": "The the care coordinator approves; the assistant prepares the evidence."
+        "a": "The care coordinator approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a interpreter request case?",
@@ -374,7 +374,7 @@ export const november18BlogPosts: BlogPost[] = [
       "label": "HHS: HIPAA",
       "url": "https://www.hhs.gov/hipaa/index.html"
     },
-    "keyTakeaway": "The the care coordinator keeps the decision on interpreter request. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The care coordinator keeps the decision on interpreter request. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat interpreter request as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses HHS: HIPAA for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -453,7 +453,7 @@ export const november18BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a transitional care call log exception?",
-        "a": "The the transition coordinator approves; the assistant prepares the evidence."
+        "a": "The transition coordinator approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a transitional care call log case?",
@@ -470,7 +470,7 @@ export const november18BlogPosts: BlogPost[] = [
       "label": "The Joint Commission: National Patient Safety Goals",
       "url": "https://www.jointcommission.org/standards/national-patient-safety-goals/"
     },
-    "keyTakeaway": "The the transition coordinator keeps the decision on transitional care call log. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The transition coordinator keeps the decision on transitional care call log. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat transitional care call log as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses The Joint Commission: National Patient Safety Goals for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -549,7 +549,7 @@ export const november18BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a lab result routing rule exception?",
-        "a": "The the panel manager approves; the assistant prepares the evidence."
+        "a": "The panel manager approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a lab result routing rule case?",
@@ -566,7 +566,7 @@ export const november18BlogPosts: BlogPost[] = [
       "label": "AHRQ: Quality improvement",
       "url": "https://www.ahrq.gov/ncepcr/tools/quality-improvement/index.html"
     },
-    "keyTakeaway": "The the panel manager keeps the decision on lab result routing rule. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The panel manager keeps the decision on lab result routing rule. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat lab result routing rule as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses AHRQ: Quality improvement for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -645,7 +645,7 @@ export const november18BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a transportation voucher exception?",
-        "a": "The the access coordinator approves; the assistant prepares the evidence."
+        "a": "The access coordinator approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a transportation voucher case?",
@@ -662,7 +662,7 @@ export const november18BlogPosts: BlogPost[] = [
       "label": "HRSA: Health center program",
       "url": "https://www.hrsa.gov/"
     },
-    "keyTakeaway": "The the access coordinator keeps the decision on transportation voucher. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The access coordinator keeps the decision on transportation voucher. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat transportation voucher as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses HRSA: Health center program for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
@@ -741,7 +741,7 @@ export const november18BlogPosts: BlogPost[] = [
     "faq": [
       {
         "q": "Who approves a immunization catch-up plan exception?",
-        "a": "The the panel manager approves; the assistant prepares the evidence."
+        "a": "The panel manager approves; the assistant prepares the evidence."
       },
       {
         "q": "What closes a immunization catch-up plan case?",
@@ -758,7 +758,7 @@ export const november18BlogPosts: BlogPost[] = [
       "label": "AHRQ: Quality improvement",
       "url": "https://www.ahrq.gov/ncepcr/tools/quality-improvement/index.html"
     },
-    "keyTakeaway": "The the panel manager keeps the decision on immunization catch-up plan. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "keyTakeaway": "The panel manager keeps the decision on immunization catch-up plan. The assistant prepares the evidence, dates the record, and confirms the destination value.",
     "conclusion": "Treat immunization catch-up plan as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses AHRQ: Quality improvement for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
