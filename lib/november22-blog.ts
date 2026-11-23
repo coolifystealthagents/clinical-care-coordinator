@@ -177,7 +177,7 @@ export const november22BlogPosts: BlogPost[] = [
       }
     ],
     "internalService": "/services/care-transition-support",
-    "internalSibling": "/blog/record-an-interpreter-request-on-the-appointment-record",
+    "internalSibling": "/blog/track-a-language-preference-change-through-the-next-visit",
     "source": {
       "label": "CMS: Care coordination",
       "url": "https://www.cms.gov/priorities/innovation/key-concepts/care-coordination"
@@ -187,88 +187,88 @@ export const november22BlogPosts: BlogPost[] = [
     "sourceContext": "This note uses CMS: Care coordination for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
       {
-        "label": "Record an interpreter request on the appointment record",
-        "href": "/blog/record-an-interpreter-request-on-the-appointment-record"
+        "label": "Track a language preference change through the next visit",
+        "href": "/blog/track-a-language-preference-change-through-the-next-visit"
       }
     ]
   },
   {
-    "slug": "record-an-interpreter-request-on-the-appointment-record",
-    "title": "Record an interpreter request on the appointment record",
-    "description": "A bounded operational guide to interpreter request documentation, with explicit evidence, decision rights, and a verified close.",
+    "slug": "track-a-language-preference-change-through-the-next-visit",
+    "title": "Track a language preference change through the next visit",
+    "description": "A bounded operational guide to language preference change, with explicit evidence, decision rights, and a verified close.",
     "category": "Patient communication",
     "publishedAt": "2026-11-22",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-22/record-an-interpreter-request-on-the-appointment-record.png",
+    "thumbnail": "/thumbnails/november-22/track-a-language-preference-change-through-the-next-visit.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
         "paragraphs": [
-          "The record should show the source, the decision, and the surviving value in one place. Separate the request from the decision, because a complete request is not an approval. Record the queue and the entity so the case cannot drift into another team's work. For interpreter request documentation, compare the appointment record with the destination value rather than relying on a status label. On the clinical care coordination desk, the interpreter request documentation entry is compared with the referral source and dated by the named care coordinator before the case advances.",
-          "If the team cannot reproduce the result from the record, the control is not finished. Write the decision in one sentence so the reviewer knows what would count as an answer. Note the observation window; a case without a period cannot be compared later. For interpreter request documentation, the working file keeps the appointment record and the interpreter request beside the decision note. The interpreter request documentation note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle."
+          "Separate the request from the decision, because a complete request is not an approval. Say which system of record governs if two sources disagree. Do not let a deadline expand a role beyond its written limit. For language preference change, the working file keeps the patient language request and the language preference field beside the decision note. On the clinical care coordination desk, the language preference change entry is compared with the referral source and dated by the named care coordinator before the case advances.",
+          "Name the trigger that brought the case into the queue. Use the same definition across the queue and the review so the counts agree. Separate the request from the decision, because a complete request is not an approval. A language preference change exception keeps the next visit record attached and routes the question to the care coordinator. The language preference change note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle."
         ]
       },
       {
         "heading": "Map the source and the evidence trail",
         "paragraphs": [
-          "Record who supplied each document and when it arrived. State whether the evidence is confirmed, inferred, or unavailable. If the team cannot reproduce the result from the record, the control is not finished. For interpreter request documentation, the working file keeps the appointment record and the interpreter request beside the decision note. The interpreter request documentation note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle.",
-          "Use the same case key in the queue and in the evidence extract. If the team cannot reproduce the result from the record, the control is not finished. State whether the evidence is confirmed, inferred, or unavailable. A interpreter request documentation exception keeps the visit note attached and routes the question to the care coordinator. At the weekly care coordination review, the interpreter request documentation item is re-read and any change is recorded in the same working folder."
+          "Do not treat a screenshot as a substitute for the system record. State whether the evidence is confirmed, inferred, or unavailable. Keep a version label on every file that can change. A language preference change exception keeps the next visit record attached and routes the question to the care coordinator. The language preference change note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle.",
+          "Do not treat a screenshot as a substitute for the system record. Keep the original document and the working copy in separate states. The record should show the source, the decision, and the surviving value in one place. Apply the same language preference change test to the interpreter vendor note and to the value that survives in the scheduling system. At the weekly care coordination review, the language preference change item is re-read and any change is recorded in the same working folder."
         ]
       },
       {
         "heading": "Set the authority boundary",
         "paragraphs": [
-          "Do not let a deadline expand a role beyond its written limit. Name the owner for every open item, including items waiting on someone else. A complete packet is not an approval; the decision needs a person and a timestamp. A interpreter request documentation exception keeps the visit note attached and routes the question to the care coordinator. At the weekly care coordination review, the interpreter request documentation item is re-read and any change is recorded in the same working folder.",
-          "Name the owner for every open item, including items waiting on someone else. Approval, payment, records disposition, and policy exceptions stay with the named owner. The record should show the source, the decision, and the surviving value in one place. Apply the same interpreter request documentation test to the vendor confirmation and to the value that survives in the scheduling system. On the clinical care coordination desk, the interpreter request documentation entry is compared with the referral source and dated by the named care coordinator before the case advances."
+          "Use the same definition across the queue and the review so the counts agree. If the team cannot reproduce the result from the record, the control is not finished. If two roles share a queue, mark which one decides each item. Apply the same language preference change test to the interpreter vendor note and to the value that survives in the scheduling system. At the weekly care coordination review, the language preference change item is re-read and any change is recorded in the same working folder.",
+          "A short written rule is easier to test than an unwritten habit. The next reviewer should not have to ask which document is authoritative. Do not let a familiar requester bypass the approval boundary. The language preference change close note cites the scheduling system, the approver, and the time of the final check. On the clinical care coordination desk, the language preference change entry is compared with the referral source and dated by the named care coordinator before the case advances."
         ]
       },
       {
         "heading": "Run the daily handoff",
         "paragraphs": [
-          "A handoff is complete only when the receiver acknowledges it. Compare arrivals and completions, not only the backlog total. A short written rule is easier to test than an unwritten habit. Apply the same interpreter request documentation test to the vendor confirmation and to the value that survives in the scheduling system. On the clinical care coordination desk, the interpreter request documentation entry is compared with the referral source and dated by the named care coordinator before the case advances.",
-          "Check that the owner is actually available before assigning. Compare arrivals and completions, not only the backlog total. Open the day with a queue pass by age, owner, and missing evidence. The interpreter request documentation close note cites the scheduling system, the approver, and the time of the final check. The interpreter request documentation note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle."
+          "Open the day with a queue pass by age, owner, and missing evidence. The record should show the source, the decision, and the surviving value in one place. Leave the next shift a queue that needs no chat history. The language preference change close note cites the scheduling system, the approver, and the time of the final check. On the clinical care coordination desk, the language preference change entry is compared with the referral source and dated by the named care coordinator before the case advances.",
+          "A case that moves between owners should keep both owner periods visible. Escalate an item that has waited past the written threshold. Keep the original request so a later correction does not erase the reason for the work. Every language preference change handoff names the care coordinator and the field in the scheduling system that will confirm the change. The language preference change note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle."
         ]
       },
       {
         "heading": "Handle exceptions without rewriting history",
         "paragraphs": [
-          "Preserve both values and the time each was observed. If the team cannot reproduce the result from the record, the control is not finished. Separate a data conflict from a policy conflict. The interpreter request documentation close note cites the scheduling system, the approver, and the time of the final check. The interpreter request documentation note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle.",
-          "A clean-looking status is not evidence that the underlying work is correct. When access blocks the work, name the system, role, and approver. Do not let a deadline expand a role beyond its written limit. Every interpreter request documentation handoff names the care coordinator and the field in the scheduling system that will confirm the change. At the weekly care coordination review, the interpreter request documentation item is re-read and any change is recorded in the same working folder."
+          "The next reviewer should not have to ask which document is authoritative. If the team cannot reproduce the result from the record, the control is not finished. Keep the failed attempt and the correction in the same history. Every language preference change handoff names the care coordinator and the field in the scheduling system that will confirm the change. The language preference change note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle.",
+          "The record should show the source, the decision, and the surviving value in one place. When access blocks the work, name the system, role, and approver. The next reviewer should not have to ask which document is authoritative. In this language preference change case, the record points to the scheduling system and names the care coordinator as the decision owner. At the weekly care coordination review, the language preference change item is re-read and any change is recorded in the same working folder."
         ]
       },
       {
         "heading": "Close with a verified destination value",
         "paragraphs": [
-          "Use the same definition across the queue and the review so the counts agree. Verify that the surviving record is the one downstream teams will use. A closed status is not proof that the destination changed. Every interpreter request documentation handoff names the care coordinator and the field in the scheduling system that will confirm the change. At the weekly care coordination review, the interpreter request documentation item is re-read and any change is recorded in the same working folder.",
-          "Test one closed case by rebuilding it from the evidence map. Record the approximate value, the approver, and the final check time. Note the next review date before closing. In this interpreter request documentation case, the record points to the scheduling system and names the care coordinator as the decision owner. On the clinical care coordination desk, the interpreter request documentation entry is compared with the referral source and dated by the named care coordinator before the case advances."
+          "A closed status is not proof that the destination changed. Use the same definition across the queue and the review so the counts agree. Record the approximate value, the approver, and the final check time. In this language preference change case, the record points to the scheduling system and names the care coordinator as the decision owner. At the weekly care coordination review, the language preference change item is re-read and any change is recorded in the same working folder.",
+          "Tie the close note to the original request and the final evidence. Name the owner for every open item, including items waiting on someone else. A case that moves between owners should keep both owner periods visible. The language preference change record should let a second reviewer rebuild the decision from the language preference field and the interpreter vendor note. On the clinical care coordination desk, the language preference change entry is compared with the referral source and dated by the named care coordinator before the case advances."
         ]
       },
       {
         "heading": "Review the pattern, not only the case",
         "paragraphs": [
-          "Set the next review date before the action begins. Separate what was observed from what the team believes caused it. Keep the prior procedure available for comparison. In this interpreter request documentation case, the record points to the scheduling system and names the care coordinator as the decision owner. On the clinical care coordination desk, the interpreter request documentation entry is compared with the referral source and dated by the named care coordinator before the case advances.",
-          "Do not let a deadline expand a role beyond its written limit. If the team cannot reproduce the result from the record, the control is not finished. Use the same definition across the queue and the review so the counts agree. The interpreter request documentation record should let a second reviewer rebuild the decision from the interpreter request and the vendor confirmation. The interpreter request documentation note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle."
+          "Use case-level review to explain an outlier before calling it a trend. End the review with one change and one measure. Include a routine case, a reopened case, and a cross-owner handoff. The language preference change record should let a second reviewer rebuild the decision from the language preference field and the interpreter vendor note. On the clinical care coordination desk, the language preference change entry is compared with the referral source and dated by the named care coordinator before the case advances.",
+          "Check whether the definition changed during the period. Separate what was observed from what the team believes caused it. Do not let a deadline expand a role beyond its written limit. The language preference change case note should show what the scheduling system held at the time and who reviewed it. The language preference change note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle."
         ]
       },
       {
         "heading": "Keep the record ready for the next reviewer",
         "paragraphs": [
-          "Use the same definition across the queue and the review so the counts agree. The next reviewer should not have to ask which document is authoritative. Link the evidence to the exact field it supports. The interpreter request documentation record should let a second reviewer rebuild the decision from the interpreter request and the vendor confirmation. The interpreter request documentation note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle.",
-          "Keep the note short enough to read with the case. If the team cannot reproduce the result from the record, the control is not finished. Keep the source reference and the coded value in the same row. The interpreter request documentation case note should show what the scheduling system held at the time and who reviewed it. At the weekly care coordination review, the interpreter request documentation item is re-read and any change is recorded in the same working folder."
+          "The record should show the source, the decision, and the surviving value in one place. Use the approved repository for sensitive content. Record event time separately from entry time. The language preference change case note should show what the scheduling system held at the time and who reviewed it. The language preference change note stays in the care coordination working folder, where a second coordinator confirms it against the source record before the weekly huddle.",
+          "Keep the original request so a later correction does not erase the reason for the work. Archive the extract with the study so it can be repeated. Keep the note short enough to read with the case. In the language preference change queue, an item without a next action is treated as an exception. At the weekly care coordination review, the language preference change item is re-read and any change is recorded in the same working folder."
         ]
       }
     ],
     "faq": [
       {
-        "q": "Who approves a interpreter request documentation exception?",
+        "q": "Who approves a language preference change exception?",
         "a": "The the care coordinator approves; the assistant prepares the evidence."
       },
       {
-        "q": "What closes a interpreter request documentation case?",
+        "q": "What closes a language preference change case?",
         "a": "A named owner, the source record, the decision, and the confirmed destination value."
       },
       {
-        "q": "What closes a interpreter request documentation case?",
+        "q": "What closes a language preference change case?",
         "a": "A named owner, the source record, the dated decision, and the confirmed destination value."
       }
     ],
@@ -278,8 +278,8 @@ export const november22BlogPosts: BlogPost[] = [
       "label": "HHS: HIPAA",
       "url": "https://www.hhs.gov/hipaa/index.html"
     },
-    "keyTakeaway": "The care coordinator keeps the decision on interpreter request documentation. The assistant prepares the evidence, dates the record, and confirms the destination value.",
-    "conclusion": "Treat interpreter request documentation as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
+    "keyTakeaway": "The care coordinator keeps the decision on language preference change. The assistant prepares the evidence, dates the record, and confirms the destination value.",
+    "conclusion": "Treat language preference change as a bounded control rather than a status update. A reviewer should be able to rebuild the case from the named source, the dated record, and the confirmed destination.",
     "sourceContext": "This note uses HHS: HIPAA for public context and stays within the operational record. It is not legal, clinical, or billing advice.",
     "relatedArticles": [
       {
