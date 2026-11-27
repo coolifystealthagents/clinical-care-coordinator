@@ -4,6 +4,8 @@ import { Footer, Header } from '@/components/SiteChrome';
 import { site } from '@/lib/site';
 import './globals.css';
 
+import "./site-chrome-fixes.css";
+
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${site.domain}`),
   title: { default: `${site.name} | Administrative care coordination support`, template: `%s | ${site.name}` },

@@ -20,7 +20,7 @@ export function Header() {
   return (
     <>
       <a className="skip-link" href="#main-content">Skip to main content</a>
-      <header className="site-header">
+      <header data-site-header="sticky" className="site-header">
         <Link className="brand" href="/" aria-label={`${site.name} home`}>
           <Image src="/logo.svg" alt="" width={42} height={42} priority />
           <span className="brand-full">{site.name}</span>
@@ -40,7 +40,7 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer>
+    <footer data-site-footer="true">
       <div>
         <Link className="brand inverse" href="/">
           <Image src="/logo.svg" alt="" width={44} height={44} />
@@ -49,12 +49,12 @@ export function Footer() {
         <p>Administrative support for clearer care team handoffs.</p>
         <Attribution inverse />
       </div>
-      <nav className="footer-links" aria-label="Footer navigation">
+      <nav data-footer-menu="true" className="footer-links" aria-label="Footer navigation">
         <Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/contact-us">Contact Us</Link>
         <Link href="/about">About</Link><Link href="/blog">Blog</Link><Link href="/research">Research</Link>
         <Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link>
       </nav>
-      <p className="copyright">© {new Date().getFullYear()} {site.name}</p>
+      <section className="site-parent-company" aria-label="Powered by StealthAgents"><a className="site-parent-logo" href="https://stealthagents.com/" aria-label="Visit StealthAgents"><img src="/stealthagents-parent-logo.png" alt="StealthAgents" width="158" height="53" loading="lazy" /></a><div><h2>Powered by StealthAgents</h2><p>StealthAgents recruits and supports the remote professionals behind our services, from matching and onboarding to ongoing team support.</p><a className="site-parent-link" href="https://stealthagents.com/">Explore StealthAgents ↗</a></div></section><p className="copyright">© {new Date().getFullYear()} {site.name}</p>
     </footer>
   );
 }
